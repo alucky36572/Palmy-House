@@ -32,6 +32,43 @@
         <p id="result"></p>
     </div>
 
+    <label for="adults">成人：</label>
+    <select id="adults" onchange="updateTotal()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+
+    <label for="children">孩童：</label>
+    <select id="children" onchange="updateTotal()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+
+    <label for="infants">嬰幼兒：</label>
+    <select id="infants" onchange="updateTotal()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+
+    <p>總人数: <span id="total">0</span></p>
+
     <script src="reservation.js"></script>
 </body>
 </html>

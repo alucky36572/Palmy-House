@@ -57,8 +57,24 @@
             // 计算总人数
             var total = adults + children + infants;
 
+            // 如果总人数超过7，则重置下拉框的值
+            if (total > 7) {
+                alert("总人数不能超过7！");
+                resetValues();
+            } else {
+                // 更新显示结果
+                document.getElementById("total").innerHTML = total;
+            }
+        }
+
+        function resetValues() {
+            // 将下拉框的值重置为0
+            document.getElementById("adults").value = "0";
+            document.getElementById("children").value = "0";
+            document.getElementById("infants").value = "0";
+
             // 更新显示结果
-            document.getElementById("total").innerHTML = total;
+            document.getElementById("total").innerHTML = "0";
         }
     </script>
 
