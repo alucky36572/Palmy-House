@@ -1,0 +1,43 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+    background-color: #FFF1DE;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.header h1{
+    color: #6D3C0E;
+    font-weight: bold;
+    margin:5% ;
+    font-size: 36px;
+}
+
+.header img{
+    margin: 1%;
+}
+
+.banner{
+    max-width: 1300px;
+    margin:auto;
+    /* border: 2px solid red; */
+}
+
+.banner img{
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+

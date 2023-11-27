@@ -1,0 +1,302 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+    background-color: #FFF1DE;
+}
+
+#logo img {
+    margin-left: 40px;
+    width: 100px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(246, 190, 177, .5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    z-index: 2;
+}
+
+ul,li,ul li a {
+    height: 100%;
+    line-height: 120px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+}
+
+ul li a:hover {
+    background-color: #F6BEB1;
+    color: white;
+}
+
+.flex-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.fun_cover {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 120px;
+}
+
+.fun_intro {
+    /* border: 2px solid red; */
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.fun_intro h1 {
+    writing-mode: vertical-lr;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 120px;
+
+}
+
+.fun_intro img {
+    /* width: 100%; */
+    vertical-align: bottom;
+    border-radius: 5px;
+    transform: scaleX(-1);
+}
+
+.fun_content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.attractions {
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: space-evenly;
+}
+
+.attractions_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.attractions_text h2 {
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+}
+
+.attractions_text h3 {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    text-decoration-line: underline;
+    text-underline-offset: 20px;
+
+}
+
+.attractions_text p {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+
+.attractions img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.image-container {
+    position: relative;
+    width: 670px;
+    /* 设置图像容器的宽度 */
+}
+
+.hover-effect {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    /* 添加过渡效果，使变化更平滑 */
+}
+
+.hover-effect:hover {
+    transform: scale(1.1);
+    /* 鼠标悬停时放大图像，可以根据需要调整比例 */
+}
+
+.fun_content a {
+    text-decoration: none;
+    margin: 200px 0;
+    font-size: 48px;
+    display: block;
+    color: inherit;
+}
+
+.spot_title button{
+    color: black; /* 白色文本颜色 */
+    padding: 10px 20px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    text-decoration: none; /* 去除文本下划线 */
+    display: inline-block; /* 使按钮表现为块级元素 */
+    font-size: 24px; /* 文本大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    font-family: 'Noto Serif TC', serif;
+    background-color: #FFF1DE;
+    letter-spacing: 0.1em;
+}
+
+.spot_title button:hover{
+    background-color: #FEE4DA;
+}
+
+.hot_spot{
+    margin-top: 10%;
+}
+
+.hot_spot h2{
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    padding: 10px 0;
+}
+
+.card{
+    width: 370px;
+    margin: 15px;
+    background-color: rgb(210,176,125,0.2);
+    text-align: center;
+    position: relative;
+    
+}
+
+.card .photo{
+    /* width: 100%; */
+    padding: 20px;
+}
+
+.card h3{
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+}
+
+.card p{
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    padding: 20px;
+}
+
+.card:hover{
+    transform: translateY(-30px);
+}
+
+.card{
+    transform: translateY(0);
+    transition: .5s;
+}
+
+.gps{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 12%;
+    height: auto;
+}
+
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 2%;
+}
+
+.footer_container{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    background-color: rgb(154,84,18,0.9);
+    border-radius: 5px; 
+}
+
+.footer{
+    width: 1200px; 
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+
+}
+
+.footer h2{
+    writing-mode: vertical-lr;
+    font-size: 32px;
+    color: white;
+    margin-top: 1%; 
+    letter-spacing: 0.1em;
+}
+
+.footer h3{
+    font-size: 32px;
+    color:white;
+    font-weight: bold;
+    margin-top: 1%;
+    letter-spacing: 0.1em;
+}
+
+.palmy{
+    position: relative; 
+}
+
+.palmy img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer_p{
+    display: flex;
+    font-size: 24px;
+    margin-top: 2%;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    color: white;
+}
+
+.p2{
+    margin-left: 2%;
+}
+
+.map a{
+    position: absolute;
+    right: 0;
+    top: 48%;
+    text-decoration: none;
+    color: white;
+}
+
+.palmy a:hover{
+    color: black;
+    border-radius: 5px;
+}
+
+iframe{
+    width: 1000px;
+    height: 200px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

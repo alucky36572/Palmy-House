@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+    <title>Passenger Selection</title>
+</head>
+<body>
+
+    <label for="adults">成人：</label>
+    <select id="adults" onchange="updateTotal()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- 其他成人选项... -->
+        <option value="7">7</option>
+    </select>
+
+    <label for="children">孩童：</label>
+    <select id="children" onchange="updateTotal()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- 其他孩童选项... -->
+        <option value="7">7</option>
+    </select>
+
+    <label for="infants">嬰幼兒：</label>
+    <select id="infants" onchange="updateTotal()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- 其他嬰幼兒选项... -->
+        <option value="7">7</option>
+    </select>
+
+    <p>总人数: <span id="total">0</span></p>
+
+    <script>
+        function updateTotal() {
+            // 获取每个下拉选择框的值
+            var adults = parseInt(document.getElementById("adults").value);
+            var children = parseInt(document.getElementById("children").value);
+            var infants = parseInt(document.getElementById("infants").value);
+
+            // 计算总人数
+            var total = adults + children + infants;
+
+            // 更新显示结果
+            document.getElementById("total").innerHTML = total;
+        }
+    </script>
+
+    </body>
+</html>
