@@ -30,7 +30,282 @@ body {
 
 .banner img{
     width: 100%;
+}
 
+.choice{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    /* border: 2px solid red; */
+    margin-top: 2%;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+.people p{
+    font-size: 18px;
+    margin-top: 4%;
+}
+
+#result{
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+.date button{
+    border: none;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    padding:8px 15px ;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #F5CEA9;
+}
+
+.date button:hover{
+    background-color: #D9B18C;
+}
+
+.room_information{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    /* border: 2px solid red ; */
+    margin-top: 3%;
+}
+
+.family{
+    /* border: 2px solid red ; */
+    position: relative;
+}
+
+.tab {
+    background-color: rgba(255, 225, 215);
+    padding: 8px 15px;
+    position: absolute;
+    letter-spacing: 0.1em;
+    border-radius: 5px;
+    font-size: 18px;
+    top: 0;
+}
+
+.family h2{
+    font-size: 32px;
+    text-align: center;
+    /* border: 2px solid red; */
+    letter-spacing: 0.1em;
+}
+
+.next a {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(154, 84, 18, 0.78);
+    color: white;
+    padding: 16px 110px;
+    position: absolute;
+    margin-top: 5%;
+    right: 0;
+    letter-spacing: 0.1em;
+    border-radius: 5px;
+}
+
+.next a:hover {
+    background-color: #CCA581;
+}
+
+.family_middle{
+    width: 200px;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
+.family_amount{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+}
+
+.family_right{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    /* border-left: 2px solid rgb(177, 177, 177,.5) ; */
+    position: relative;
+}
+
+.family_bed{
+    font-size: 24px;
+    letter-spacing: 0.1em;
+}
+
+.family_bed h3{
+    padding: 10px;
+}
+
+.family_price{
+    font-size: 18px;
+    letter-spacing: 0.1em;
+
+}
+
+.family_price span{
+    font-size: 24px;
+    color: #9A5412;
+}
+
+#count1{
+    font-size: 32px;
+}
+
+#count2{
+    font-size: 32px;
+}
+
+#count3{
+    font-size: 32px;
+}
+
+.family_amount p{
+    font-size: 32px;
+}
+
+.family button{
+    display: block;
+    margin-top: 18%;
+}
+
+.family_amount button{
+    /* border: 2px solid red; */
+    width: 40px;
+    height: 50px;
+    border: none;
+}
+
+.family_amount .minus{
+    background-color: #EAD7C6;
+}
+
+.family_amount .plus{
+    background-color: #F5CEA9;
+}
+
+.family_right .right2{
+    margin-top: 20%;
+}
+
+.p3{
+    font-size: 24px;
+    color: #9A5412;
+}
+
+.p1{
+    font-size: 24px;
+}
+
+.right1_content{
+    margin-top: 15%;
+    padding-left: 10%;
+}
+
+.right1 h2{
+    padding-left: 10%;
+    /* border: 2px solid red; */
+}
+
+.family_flex{
+    display: flex;
+    /* border:2px solid red ; */
+    width: 700px;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    border-bottom: 2px solid rgb(177, 177, 177,.5);
+}
+
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 2%;
+}
+
+.footer_container{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    background-color: rgb(154,84,18,0.9);
+    border-radius: 5px; 
+}
+
+.footer{
+    width: 1200px; 
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+
+}
+
+.footer h2{
+    writing-mode: vertical-lr;
+    font-size: 32px;
+    color: white;
+    margin-top: 1%; 
+    letter-spacing: 0.1em;
+}
+
+.footer h3{
+    font-size: 32px;
+    color:white;
+    font-weight: bold;
+    margin-top: 1%;
+    letter-spacing: 0.1em;
+}
+
+.palmy{
+    position: relative; 
+}
+
+.palmy img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer_p{
+    display: flex;
+    font-size: 24px;
+    margin-top: 2%;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    color: white;
+}
+
+.p2{
+    margin-left: 2%;
+}
+
+.map a{
+    position: absolute;
+    right: 0;
+    top: 48%;
+    text-decoration: none;
+    color: white;
+}
+
+.palmy a:hover{
+    color: black;
+    border-radius: 5px;
+}
+
+iframe{
+    width: 1000px;
+    height: 200px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 

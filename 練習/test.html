@@ -1,82 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-    </style>
-    <title>Passenger Selection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 添加样式使锚点固定在左侧 */
+    #fixed-anchor {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-    <label for="adults">成人：</label>
-    <select id="adults" onchange="updateTotal()">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <!-- 其他成人选项... -->
-        <option value="7">7</option>
-    </select>
+  <div style="height: 1000px; background-color: #f0f0f0; padding: 20px;">
+    <!-- 页面内容，增加一些高度以便滚动显示效果 -->
+  </div>
 
-    <label for="children">孩童：</label>
-    <select id="children" onchange="updateTotal()">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <!-- 其他孩童选项... -->
-        <option value="7">7</option>
-    </select>
+  <!-- 固定在左侧的锚点链接 -->
+  <a href="#fixed-anchor" id="fixed-anchor">返回顶部</a>
 
-    <label for="infants">嬰幼兒：</label>
-    <select id="infants" onchange="updateTotal()">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <!-- 其他嬰幼兒选项... -->
-        <option value="7">7</option>
-    </select>
-
-    <p>总人数: <span id="total">0</span></p>
-
-    <script>
-        function updateTotal() {
-            // 获取每个下拉选择框的值
-            var adults = parseInt(document.getElementById("adults").value);
-            var children = parseInt(document.getElementById("children").value);
-            var infants = parseInt(document.getElementById("infants").value);
-
-            // 计算总人数
-            var total = adults + children + infants;
-
-            // 如果总人数超过7，则重置下拉框的值
-            if (total > 7) {
-                alert("总人数不能超过7！");
-                resetValues();
-            } else {
-                // 更新显示结果
-                document.getElementById("total").innerHTML = total;
-            }
-        }
-
-        function resetValues() {
-            // 将下拉框的值重置为0
-            document.getElementById("adults").value = "0";
-            document.getElementById("children").value = "0";
-            document.getElementById("infants").value = "0";
-
-            // 更新显示结果
-            document.getElementById("total").innerHTML = "0";
-        }
-    </script>
-
-    </body>
+</body>
 </html>
