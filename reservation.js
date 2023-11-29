@@ -121,9 +121,11 @@ function updateCount(id) {
 
 function increase(id) {
     // 加一
-    counters[id]++;
-    // 更新显示
-    updateCount(id);
+    if (counters[id] < 1) {
+        counters[id]++;
+        // 更新显示
+        updateCount(id);
+    }
 }
 
 function decrease(id) {
