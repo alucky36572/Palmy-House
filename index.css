@@ -327,7 +327,7 @@ ul li a:hover {
 
 .item2{
     position: relative;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .item2:hover .text2{
@@ -382,7 +382,7 @@ ul li a:hover {
 
 .index_fun {
     position: relative;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 90%;
 }
 
