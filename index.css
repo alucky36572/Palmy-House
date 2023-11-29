@@ -250,7 +250,7 @@ ul li a:hover {
     /* max-width: 1200px; */
     padding-top: 10%;
     display: grid;
-    column-gap: 100px;
+    column-gap: 50px;
     /* padding-left: 10%;  */
     justify-content: center;
 
@@ -271,12 +271,12 @@ ul li a:hover {
 
 .index_eat h2 {
     font-size: 32px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .index_fun h2 {
     font-size: 32px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .index_eat p {
@@ -327,6 +327,7 @@ ul li a:hover {
 
 .item2{
     position: relative;
+    border: 2px solid red;
 }
 
 .item2:hover .text2{
@@ -337,6 +338,7 @@ ul li a:hover {
     border-radius: 5px;
     vertical-align: bottom;
     width: 100%;
+    height: 400px;
 
 }
 
@@ -344,6 +346,7 @@ ul li a:hover {
     border-radius: 5px;
     width: 100%;
     vertical-align: bottom;
+    height: 400px;
 }
 
 .index_eat_learn-more a {
@@ -359,6 +362,7 @@ ul li a:hover {
 
 .index_eat {
     position: relative;
+    width: 90%;
     /* border: 2px solid red; */
 }
 
@@ -378,6 +382,8 @@ ul li a:hover {
 
 .index_fun {
     position: relative;
+    border: 2px solid red;
+    width: 90%;
 }
 
 .index_fun_learn-more a:hover {

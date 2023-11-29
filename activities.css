@@ -46,7 +46,7 @@ ul li a:hover {
 .fun_cover {
     width: 100%;
     max-width: 1200px;
-    margin: 0 120px;
+    /* margin: 0 120px; */
 }
 
 .fun_intro {
@@ -65,7 +65,7 @@ ul li a:hover {
 }
 
 .fun_intro img {
-    /* width: 100%; */
+    width: 100%;
     vertical-align: bottom;
     border-radius: 5px;
     transform: scaleX(-1);
