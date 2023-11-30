@@ -151,6 +151,10 @@ body {
     /* border: 2px solid red; */
 }
 
+.room img{
+    border-radius:  5px;
+}
+
 .room p{
     font-size: 24px;
     letter-spacing: 0.1em;
@@ -271,6 +275,15 @@ body {
     background-color: #d6d6d6;
 }
 
+hr.style-one {
+    border: 0;
+    height: 0;
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 2%;
+}
+
 .footer_container{
     width: 100%;
     margin-top: 10%;
@@ -308,10 +321,21 @@ body {
     position: relative; 
 }
 
-.palmy img {
+.icon {
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.ig{
+    padding-top: 8%;
+}
+
+.fb{
+    padding-top: 5%;
+    margin-left: 3%;
 }
 
 .footer_p{

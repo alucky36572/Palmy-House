@@ -160,10 +160,21 @@ hr.style-one {
     position: relative; 
 }
 
-.palmy img {
+.icon {
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.ig{
+    padding-top: 8%;
+}
+
+.fb{
+    padding-top: 5%;
+    margin-left: 3%;
 }
 
 .footer_p{

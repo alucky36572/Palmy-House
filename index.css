@@ -9,34 +9,45 @@ body {
     opacity: 80%;
 }
 
+.bannerpic{
+    position: relative;
+}
+
+
 .header {
     width: 100%;
+    
 }
 
 .header_content {
     max-width: 1200px;
+    
 }
 
 #logo img {
     margin-left: 40px;
     width: 100px;
+    position: absolute;
+    top: 10px;
+    position: fixed;
 }
 
 nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 90%;
+    right: 0;
     background: rgba(246, 190, 177, .5);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 120px;
+    height: 100px;
     z-index: 2;
 }
 
 ul,li,ul li a {
     height: 100%;
-    line-height: 120px;
+    line-height: 100px;
     display: block;
     width: 100%;
     text-align: center;
@@ -45,6 +56,7 @@ ul,li,ul li a {
     font-size: 24px;
     letter-spacing: 0.1em;
     /* border: 2px solid red; */
+    
 }
 
 ul li a:hover {
@@ -180,7 +192,7 @@ ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .people1 img {
@@ -247,12 +259,13 @@ ul li a:hover {
 
 .eat_fun {
     /* border: 2px solid red; */
-    /* max-width: 1200px; */
+    max-width: 1200px;
     padding-top: 10%;
     display: grid;
     column-gap: 50px;
     /* padding-left: 10%;  */
     justify-content: center;
+    margin: auto;
 
 
 }
@@ -338,7 +351,7 @@ ul li a:hover {
     border-radius: 5px;
     vertical-align: bottom;
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
 
 }
 
@@ -346,7 +359,7 @@ ul li a:hover {
     border-radius: 5px;
     width: 100%;
     vertical-align: bottom;
-    height: 400px;
+    /* height: 400px; */
 }
 
 .index_eat_learn-more a {
@@ -362,7 +375,7 @@ ul li a:hover {
 
 .index_eat {
     position: relative;
-    width: 90%;
+    width: 100%;
     /* border: 2px solid red; */
 }
 
@@ -383,7 +396,7 @@ ul li a:hover {
 .index_fun {
     position: relative;
     /* border: 2px solid red; */
-    width: 90%;
+    width: 100%;
 }
 
 .index_fun_learn-more a:hover {
@@ -519,10 +532,21 @@ hr.style-one {
     position: relative; 
 }
 
-.palmy img {
+.icon {
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.ig{
+    padding-top: 8%;
+}
+
+.fb{
+    padding-top: 5%;
+    margin-left: 3%;
 }
 
 .footer_p{

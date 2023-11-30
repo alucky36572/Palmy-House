@@ -10,24 +10,28 @@ body {
 
 #logo img {
     margin-left: 40px;
-    width: 100px;    
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    position: fixed;
 }
 
 nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 90%;
+    right: 0;
     background: rgba(246, 190, 177, .5);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 120px;
+    height: 100px;
     z-index: 2;
 }
 
 ul, li, ul li a{
     height: 100%;
-    line-height: 120px;
+    line-height: 100px;
     display: block;
     width: 100%;
     text-align: center;
@@ -204,10 +208,21 @@ hr.style-one {
     position: relative; 
 }
 
-.palmy img {
+.icon {
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.ig{
+    padding-top: 8%;
+}
+
+.fb{
+    padding-top: 5%;
+    margin-left: 3%;
 }
 
 .footer_p{

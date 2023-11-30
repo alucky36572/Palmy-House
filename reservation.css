@@ -81,7 +81,13 @@ body {
     position: relative;
 }
 
-.tab {
+.family img{
+    width: 100%;
+    /* margin: auto; */
+    border-radius: 5px;
+}
+
+/* .tab {
     background-color: rgba(255, 225, 215);
     padding: 10px 15px;
     position: absolute;
@@ -89,13 +95,17 @@ body {
     border-radius: 5px;
     font-size: 18px;
     top: 0;
-}
+} */
 
 .family h2{
     font-size: 32px;
     text-align: center;
     /* border: 2px solid red; */
     letter-spacing: 0.1em;
+}
+
+.next{
+    margin-top: 100%;
 }
 
 .next a {
@@ -105,20 +115,30 @@ body {
     color: white;
     padding: 16px 110px;
     position: absolute;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     right: 0;
     letter-spacing: 0.1em;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .next a:hover {
     background-color: #CCA581;
 }
 
+.btn btn-secondary{
+    font-weight: 100;
+    /* font-size: 16px; */
+}
+
 .family_middle{
     width: 200px;
     text-align: center;
     /* border: 2px solid red; */
+}
+
+.family_middle h3{
+    font-size: 24px;
 }
 
 .family_amount{
@@ -144,9 +164,20 @@ body {
     padding: 10px;
 }
 
+.bed{
+    width: 40px;
+}
+
+.bed1{
+    width: 70px;
+}
+
 .family_price{
     font-size: 18px;
     letter-spacing: 0.1em;
+    /* border: 2px solid red; */
+    /* position: absolute; */
+    margin-top: 10%;
 
 }
 
@@ -157,14 +188,17 @@ body {
 
 #count1{
     font-size: 32px;
+    color: black;
 }
 
 #count2{
     font-size: 32px;
+    color: black;
 }
 
 #count3{
     font-size: 32px;
+    
 }
 
 .family_amount p{
@@ -181,6 +215,7 @@ body {
     width: 40px;
     height: 50px;
     border: none;
+    border-radius: 5px;
 }
 
 .family_amount .minus{
@@ -269,10 +304,21 @@ hr.style-one {
     position: relative; 
 }
 
-.palmy img {
+.icon {
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.ig{
+    padding-top: 8%;
+}
+
+.fb{
+    padding-top: 5%;
+    margin-left: 3%;
 }
 
 .footer_p{
