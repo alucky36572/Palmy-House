@@ -4,28 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* 添加样式使锚点固定在左侧 */
-    #fixed-anchor {
-      position: fixed;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
+    body {
+    font-family: 'Noto Serif TC', serif;
+    background-color: #FDF3E5;
+    background-image: url(/img/index/下載\ \(1\)\ \(1\).jpg);
+    background-size: 100%; /* 調整背景圖片大小以覆蓋整個元素 */
+  background-position: center; /* 將背景圖片置中 */
+  background-repeat: no-repeat; 
+}
+
+.bannerpic img {
+    width: 100%;
+    height: 100vh;
+    opacity: 80%;
+}
+
+.bannerpic{
+    position: relative;
+}
+
+
+.header {
+    width: 100%;
+    
+}
+
+.header_content {
+    max-width: 1200px;
+    
+}
+
+#logo img {
+    margin-left: 40px;
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    position: fixed;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    right: 0;
+    background: rgba(246, 190, 177, .5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    z-index: 2;
+}
+
+ul,li,ul li a {
+    height: 100%;
+    line-height: 100px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    /* border: 2px solid red; */
+    
+}
+
+ul li a:hover {
+    background-color: #F6BEB1;
+    color: white;
+}
+
+.flex-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.slogan{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.slogan img {
+    position: absolute;
+    top: 250px;
+    right: 40px;
+}
+
+.slogan p {
+    position: absolute;
+    top: 400px;
+    right: 70px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.1em;
+}
+
+.slogan p span {
+    color: #6D3C0E;
+    font-weight: bold;
+}
+
   </style>
 </head>
 <body>
+  <div class="bannerpic">
+  
+    <!-- <img src="/img/index/下載 (1) (1).jpg" alt="巴士天空"> -->
+</div>
 
-  <div style="height: 1000px; background-color: #f0f0f0; padding: 20px;">
-    <!-- 页面内容，增加一些高度以便滚动显示效果 -->
-  </div>
+<div class="header">
+    <div class="header_content">
+        <a href="index.html" id="logo">
+            <img src="/img/index/logo.png" alt="logo">
+        </a>
+        <nav>
 
-  <!-- 固定在左侧的锚点链接 -->
-  <a href="#fixed-anchor" id="fixed-anchor">返回顶部</a>
+            <ul class="flex-nav">
+                <li><a href="room.html">房型介紹</a></li>
+                <li><a href="food.html">美味餐點</a></li>
+                <li><a href="activities.html">活動體驗</a></li>
+                <li><a href="news.html">最新消息</a></li>
+                <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html"
+                        target="_blank">線上訂房</a></li>
+            </ul>
+        </nav>
+        <div class="slogan">
+            <img src="/img/index/不規則圓.png" alt="不規則圓底圖">
+            <p>遠離塵囂、投入<span>Palmy House</span><br>溫暖的懷抱吧！</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

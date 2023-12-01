@@ -1,6 +1,6 @@
 body {
     font-family: 'Noto Serif TC', serif;
-    background-color: #FFF1DE;
+    background-color: #FDF3E5;
 }
 
 .header{
@@ -38,7 +38,7 @@ body {
     margin: auto;
     /* border: 2px solid red; */
     margin-top: 2%;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 24px;
 }
 
@@ -60,10 +60,45 @@ body {
     cursor: pointer;
     border-radius: 4px;
     background-color: #F5CEA9;
+    
 }
 
 .date button:hover{
     background-color: #D9B18C;
+}
+
+#startDate{
+    border: none;
+    background-color: #EAD7C6;
+    border-radius: 5px;
+}
+
+/* #starDate:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} */
+
+#endDate{
+    border: none;
+    background-color: #EAD7C6;
+    border-radius: 5px;
+}
+
+#adults{
+    border: none;
+    background-color: #EAD7C6;
+    border-radius: 5px;
+}
+
+#children{
+    border: none;
+    background-color: #EAD7C6;
+    border-radius: 5px;
+}
+
+#infants{
+    border: none;
+    background-color: #EAD7C6;
+    border-radius: 5px;
 }
 
 .room_information{
