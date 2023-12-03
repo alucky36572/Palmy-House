@@ -20,10 +20,10 @@
         <img src="img/news/markus-winkler-aId-xYRTlEc-unsplash 1 (1).png" alt="消息封面圖">
     </div>
     <a href="index.html" id="logo">
-            <img src="img/index/logo.png" alt="logo">
+        <img src="img/index/logo.png" alt="logo">
     </a>
     <nav>
-        
+
         <ul class="flex-nav">
             <li><a href="room.html">房型介紹</a></li>
             <li><a href="food.html">美味餐點</a></li>
@@ -36,21 +36,30 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <a href="news2.html">
-                    <div class="card">
+                    <div class="card" id="myCard">
                         <img src="img/news/Rectangle 88 (1).png">
-                        <h2>促銷方案</h2>
-                        <h3>2023/8/21</h3>
+                        <h2 class='ddd'>促銷方案</h2>
+                        <h3 class='ddd'>2023/8/21</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <a href="news1.html">
-                    <div class="card">
+                    <div class="card" id="myCard2">
                         <img src="img/news/Rectangle 90 (1).png">
-                        <h2>安心防疫宣言</h2>
-                        <h3>2022/11/06</h3>
+                        <h2 class='ddd'>安心防疫宣言</h2>
+                        <h3 class='ddd'>2022/11/06</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4">
+                <a href="news3.html">
+                    <div class="card" id="myCard3">
+                        <img src="img/news/450x300 1 (1) (1).png">
+                        <h2 class='ddd'>防範詐騙公告</h2>
+                        <h3 class='ddd'>2022/10/16</h3>
                     </div>
                 </a>
             </div>
@@ -72,7 +81,7 @@
                     <a href="#" class="fb">
                         <img src="img/index/fb (1).png" alt="fb icon">
                     </a>
-                    </div>
+                </div>
                 <hr class="style-one" />
                 <div class="footer_p">
                     <div class="p1">
@@ -97,6 +106,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cards = document.querySelectorAll('.card');
+
+            // 遍歷所有卡片，按順序添加 'show' 類別
+            cards.forEach(function (card, index) {
+                setTimeout(function () {
+                    card.classList.add('show');
+                }, index * 400); // 這裡的 500 是動畫持續時間，可以根據需要調整
+            });
+        });
+    </script>
+
 </body>
 
 </html>

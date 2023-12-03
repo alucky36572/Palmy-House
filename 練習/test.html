@@ -3,140 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-    font-family: 'Noto Serif TC', serif;
-    background-color: #FDF3E5;
-    background-image: url(/img/index/下載\ \(1\)\ \(1\).jpg);
-    background-size: 100%; /* 調整背景圖片大小以覆蓋整個元素 */
-  background-position: center; /* 將背景圖片置中 */
-  background-repeat: no-repeat; 
-}
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
 
-.bannerpic img {
-    width: 100%;
-    height: 100vh;
-    opacity: 80%;
-}
+    .card-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
 
-.bannerpic{
-    position: relative;
-}
+    .card-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
+    .card {
+      width: 200px;
+      height: 150px;
+      background-color: #3498db;
+      color: #fff;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
 
-.header {
-    width: 100%;
-    
-}
+    /* 定義動畫效果 */
+    @keyframes slideIn {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
-.header_content {
-    max-width: 1200px;
-    
-}
+    /* 預設狀態 */
+    .card:not(.show) {
+      transform: translateY(100%);
+      opacity: 0;
+    }
 
-#logo img {
-    margin-left: 40px;
-    width: 100px;
-    position: absolute;
-    top: 10px;
-    position: fixed;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 90%;
-    right: 0;
-    background: rgba(246, 190, 177, .5);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    z-index: 2;
-}
-
-ul,li,ul li a {
-    height: 100%;
-    line-height: 100px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    font-size: 24px;
-    letter-spacing: 0.1em;
-    /* border: 2px solid red; */
-    
-}
-
-ul li a:hover {
-    background-color: #F6BEB1;
-    color: white;
-}
-
-.flex-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.slogan{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.slogan img {
-    position: absolute;
-    top: 250px;
-    right: 40px;
-}
-
-.slogan p {
-    position: absolute;
-    top: 400px;
-    right: 70px;
-    font-size: 32px;
-    text-align: center;
-    line-height: 2;
-    letter-spacing: 0.1em;
-}
-
-.slogan p span {
-    color: #6D3C0E;
-    font-weight: bold;
-}
-
+    /* 顯示狀態 */
+    .card.show {
+      animation: slideIn 0.5s ease-in-out;
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
-  <div class="bannerpic">
-  
-    <!-- <img src="/img/index/下載 (1) (1).jpg" alt="巴士天空"> -->
-</div>
 
-<div class="header">
-    <div class="header_content">
-        <a href="index.html" id="logo">
-            <img src="/img/index/logo.png" alt="logo">
-        </a>
-        <nav>
-
-            <ul class="flex-nav">
-                <li><a href="room.html">房型介紹</a></li>
-                <li><a href="food.html">美味餐點</a></li>
-                <li><a href="activities.html">活動體驗</a></li>
-                <li><a href="news.html">最新消息</a></li>
-                <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html"
-                        target="_blank">線上訂房</a></li>
-            </ul>
-        </nav>
-        <div class="slogan">
-            <img src="/img/index/不規則圓.png" alt="不規則圓底圖">
-            <p>遠離塵囂、投入<span>Palmy House</span><br>溫暖的懷抱吧！</p>
-        </div>
+<div class="card-container">
+  <div class="card-wrapper">
+    <div class="card" id="myCard">
+      <!-- 卡片內容 -->
+      <p>This is a card</p>
     </div>
+  </div>
 </div>
+
+<script>
+  // 等待文檔加載完成後，添加show類別以顯示卡片
+  document.addEventListener('DOMContentLoaded', function () {
+    var card = document.getElementById('myCard');
+    card.classList.add('show');
+  });
+</script>
+
+
 
 </body>
 </html>

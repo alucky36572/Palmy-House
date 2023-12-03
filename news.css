@@ -24,7 +24,9 @@ nav {
     z-index: 2;
 }
 
-ul,li,ul li a {
+ul,
+li,
+ul li a {
     height: 100%;
     line-height: 100px;
     display: block;
@@ -47,60 +49,120 @@ ul li a:hover {
     width: 100%;
 }
 
-.news_cover img{
+.news_cover img {
     width: 100%;
     vertical-align: middle;
 }
 
-.row{
+/* .container{
+    position: relative;
+
+    height: 100vh;
+} */
+
+.row {
     /* border: 2px solid red; */
-    flex-direction: column;
-    height: 600px;
-    justify-content: space-between;
-    margin-top: 10%;
+    /* flex-direction: column; */
+    /* height: 600px; */
+    /* justify-content: space-between; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    margin-top: 5%;
+    /* transform: translate(-50%, -50%); */
+
 }
 
-.card{
-    width: 1200px;
+.card {
+    height: 600px;
     /* border: 2px solid red; */
     display: flex;
-    justify-content: space-between;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    /* opacity: 0;
+    transition: all 0.5s ease-in-out; */
+
+
 }
 
-.row :hover{
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#myCard2:not(.show) {
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+#myCard3:not(.show) {
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+預設狀態 .card:not(.show) {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 顯示狀態 */
+.card.show {
+    animation: slideIn 1s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.row :hover {
     /* background-image: linear-gradient(90deg,rgba(218, 218, 218, 0.8),rgba(222, 222, 222, 0.8),
     rgba(236, 235, 235, 0.8),rgba(255, 255, 255, 0.8)); */
     background: linear-gradient(to right, #e2b77e, #8B4513);
     border-radius: 5px;
 }
 
-.row :hover h2{
-    color:white;
+.ddd {
+    pointer-events: none;
 }
 
-.row :hover h3{
+.row :hover h2 {
     color: white;
 }
 
-.card h2{
+.row :hover h3 {
+    color: white;
+}
+
+.card h2 {
     font-size: 32px;
     letter-spacing: 0.1em;
-    margin: auto;
+    /* margin: auto; */
 }
 
-.card h3{
+.card h3 {
     font-size: 24px;
     letter-spacing: 0.1em;
-    margin: auto;
+    /* margin: auto; */
 }
 
-.row a{
+.row a {
     text-decoration: none;
     color: inherit;
 }
 
-.card img{
+.card img {
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 hr.style-one {
@@ -112,41 +174,41 @@ hr.style-one {
     margin-top: 2%;
 }
 
-.footer_container{
+.footer_container {
     width: 100%;
     margin-top: 10%;
     display: flex;
-    background-color: rgb(154,84,18,0.9);
-    border-radius: 5px; 
+    background-color: rgb(154, 84, 18, 0.9);
+    border-radius: 5px;
 }
 
-.footer{
-    width: 1200px; 
-    margin: auto; 
+.footer {
+    width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     /* border: 2px solid red; */
 
 }
 
-.footer h2{
+.footer h2 {
     writing-mode: vertical-lr;
     font-size: 32px;
     color: white;
-    margin-top: 1%; 
+    margin-top: 1%;
     letter-spacing: 0.1em;
 }
 
-.footer h3{
+.footer h3 {
     font-size: 32px;
-    color:white;
+    color: white;
     font-weight: bold;
     margin-top: 1%;
     letter-spacing: 0.1em;
 }
 
-.palmy{
-    position: relative; 
+.palmy {
+    position: relative;
 }
 
 .icon {
@@ -157,16 +219,16 @@ hr.style-one {
     /* border: 2px solid red; */
 }
 
-.ig{
+.ig {
     padding-top: 8%;
 }
 
-.fb{
+.fb {
     padding-top: 5%;
     margin-left: 3%;
 }
 
-.footer_p{
+.footer_p {
     display: flex;
     font-size: 24px;
     margin-top: 2%;
@@ -175,11 +237,11 @@ hr.style-one {
     color: white;
 }
 
-.p2{
+.p2 {
     margin-left: 2%;
 }
 
-.map a{
+.map a {
     position: absolute;
     right: 0;
     top: 48%;
@@ -187,12 +249,12 @@ hr.style-one {
     color: white;
 }
 
-.palmy a:hover{
+.palmy a:hover {
     color: black;
     border-radius: 5px;
 }
 
-iframe{
+iframe {
     width: 1000px;
     height: 200px;
     margin-top: 2%;
