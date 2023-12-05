@@ -5,76 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
+    .hidden {
+        display: none;
     }
-
-    .card-container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-    }
-
-    .card-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .card {
-      width: 200px;
-      height: 150px;
-      background-color: #3498db;
-      color: #fff;
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
-    }
-
-    /* 定義動畫效果 */
-    @keyframes slideIn {
-      from {
-        transform: translateY(100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* 預設狀態 */
-    .card:not(.show) {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-
-    /* 顯示狀態 */
-    .card.show {
-      animation: slideIn 0.5s ease-in-out;
-      opacity: 1;
-    }
-  </style>
+</style>
 </head>
 <body>
+<div id="page1" class="">
+    <h1>第一個頁面</h1>
+    <button onclick="togglePages()">切換頁面</button>
+</div>
 
-<div class="card-container">
-  <div class="card-wrapper">
-    <div class="card" id="myCard">
-      <!-- 卡片內容 -->
-      <p>This is a card</p>
-    </div>
-  </div>
+<div id="page2" class="hidden">
+    <h1>第二個頁面</h1>
+    <button onclick="togglePages()">切換頁面</button>
 </div>
 
 <script>
-  // 等待文檔加載完成後，添加show類別以顯示卡片
-  document.addEventListener('DOMContentLoaded', function () {
-    var card = document.getElementById('myCard');
-    card.classList.add('show');
-  });
+    function togglePages() {
+        const page1 = document.getElementById("page1");
+        const page2 = document.getElementById("page2");
+
+        if (page1.classList.contains("hidden")) {
+            // 顯示第一個頁面，隱藏第二個頁面
+            page1.classList.remove("hidden");
+            page2.classList.add("hidden");
+        } else {
+            // 顯示第二個頁面，隱藏第一個頁面
+            page1.classList.add("hidden");
+            page2.classList.remove("hidden");
+        }
+    }
 </script>
 
 
