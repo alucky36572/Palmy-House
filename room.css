@@ -496,8 +496,12 @@ iframe {
         margin-top: 10%;
     }
 
+    .room_intro_img{
+        width: 70%;
+    }
+
     .room_intro img{
-        width: 100%;
+        width: 80%;
     }
 
     .room_intro_word h1{
@@ -505,7 +509,7 @@ iframe {
     }
 
     .room_intro_word p{
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .room_intro_word{
