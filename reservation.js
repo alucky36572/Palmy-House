@@ -64,13 +64,6 @@ function calculateDateDifference() {
     document.getElementById("result").innerHTML = (daysDifference + 1) + " 天 " + nightsDifference + " 晚";
 
 
-
-
-
-
-
-
-
     // 获取包含价格的元素的数组
     var priceElements = [
         document.getElementById("familyRegular"),
