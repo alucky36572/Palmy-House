@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Hamburger Animation</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cross .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.cross .bar:nth-child(2) {
+    transform: scaleX(0);
+}
+
+.cross .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+
+    hamburgerMenu.addEventListener('click', function () {
+        toggleAnimation();
+    });
+
+    function toggleAnimation() {
+        hamburgerMenu.classList.toggle('cross');
+    }
+});
+
+    </script>
+</body>
+</html>

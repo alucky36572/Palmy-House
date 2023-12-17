@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    .hidden {
-        display: none;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<div id="page1" class="">
-    <h1>第一個頁面</h1>
-    <button onclick="togglePages()">切換頁面</button>
-</div>
+    <div class="choice">
+        <div class="date">
+            <label for="startDate">入住日期：</label>
+            <input type="date" id="startDate">
 
-<div id="page2" class="hidden">
-    <h1>第二個頁面</h1>
-    <button onclick="togglePages()">切換頁面</button>
-</div>
+            <label for="endDate">退房日期：
+                <input type="date" id="endDate">
+            </label>
+            <button onclick="calculateDateDifference()">確認</button>
+            <p id="result"></p>
+        </div>
+        </div>
+    <script>
+function calculateDateDifference() {
+    var startDate = new Date(document.getElementById("startDate").value);
+    var endDate = new Date(document.getElementById("endDate").value);
 
-<script>
-    function togglePages() {
-        const page1 = document.getElementById("page1");
-        const page2 = document.getElementById("page2");
+    var daysDifference = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+    var nightsDifference = Math.max(daysDifference, 1);
 
-        if (page1.classList.contains("hidden")) {
-            // 顯示第一個頁面，隱藏第二個頁面
-            page1.classList.remove("hidden");
-            page2.classList.add("hidden");
-        } else {
-            // 顯示第二個頁面，隱藏第一個頁面
-            page1.classList.add("hidden");
-            page2.classList.remove("hidden");
+    // 假设 holidays 是您定义的假日数组，格式为 ["YYYY-MM-DD", "YYYY-MM-DD", ...]
+  // 请替换为实际的假日日期
+    var holidays = ["2023-12-23"];
+    //  // 分别统计假日晚和平日晚的数量
+    //  var holidayNights = 0;
+    // var regularNights = 0;
+
+    // // 计算每一天是假日还是平日
+    // for (var d = new Date(startDate); d < endDate; d.setDate(d.getDate() + 1)) {
+    //     if (holidays.includes(getFormattedDate(d))) {
+    //         holidayNights++;
+    //     } else {
+    //         regularNights++;
+    //     }
+    // }
+
+    // 检查入住日期是否是假日
+    var isCheckInHoliday = holidays.includes(getFormattedDate(startDate));
+
+    // 检查退房日期是否是假日
+    var isCheckOutHoliday = holidays.includes(getFormattedDate(endDate));
+
+    // 检查入住日期和退房日期之间是否有假日
+    var isHolidayInBetween = false;
+    for (var d = new Date(startDate); d < endDate; d.setDate(d.getDate() + 1)) {
+        if (holidays.includes(getFormattedDate(d))) {
+            isHolidayInBetween = true;
+            break;
         }
     }
-</script>
+
+    // 根据入住日期是否是假日以及日期之间是否有假日应用不同的价格逻辑
+    var basePrice = 100; // 请替换为实际的基础价格
+    var holidayPriceMultiplier = 1.5; // 请替换为实际的假日价格倍数
+
+    var totalPrice;
+
+    if (isCheckInHoliday || isHolidayInBetween) {
+        totalPrice = nightsDifference * basePrice * holidayPriceMultiplier; // 加价
+    } else {
+        totalPrice = nightsDifference * basePrice; // 不加价
+    }
+
+    // 显示结果
+    document.getElementById("result").innerHTML = (daysDifference + 1) + " 天 " + nightsDifference + " 晚，总价格：" + totalPrice + " 元";
+}
+
+// 辅助函数，获取格式化的日期字符串（不包含时间）
+function getFormattedDate(date) {
+    var year = date.getFullYear();
+    var month = String(date.getMonth() + 1).padStart(2, '0');
+    var day = String(date.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+}
 
 
 
+
+    </script>
+    
 </body>
 </html>

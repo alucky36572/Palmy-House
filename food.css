@@ -1,74 +1,30 @@
-body {
-    font-family: 'Noto Serif TC', serif;
-    background-color: #FDF3E5;
-}
-
 .bannerpic img {
     width: 100%;
     height: 600px;
 }
 
-#logo img {
-    margin-left: 20px;
-    width: 100px;
-    position: absolute;
-    top: 10px;
-    position: fixed;
-}
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 90%;
-    right: 0;
-    background: rgba(246, 190, 177, .5);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    z-index: 2;
-}
 
-ul, li, ul li a{
-    height: 100%;
-    line-height: 100px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    font-size: 24px;
-    letter-spacing: 0.1em;
-}
-ul li a:hover {
-    background-color: #F6BEB1;
-    color: white;
-}
-
-.flex-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.food_cover{
+.food_cover {
     width: 100%;
     max-width: 1200px;
     margin: auto;
 }
 
-.food_intro{
+.food_intro {
     /* border: 2px solid red; */
     display: flex;
     /* justify-content: space-around; */
-    margin:100px 0 50px 0px
+    margin: 100px 0 50px 0px;
+    width: 100%;
+
 }
 
-.food_intro> :first-child{
+.food_intro> :first-child {
     margin-left: 20%;
 }
 
-.food_intro h1{
+.food_intro h1 {
     writing-mode: vertical-lr;
     font-size: 32px;
     letter-spacing: 0.1em;
@@ -77,88 +33,99 @@ ul li a:hover {
 
 }
 
-.food_intro img{
-    /* width: 100%; */
+.food_intro img {
+    width: 100%;
+    height: auto;
     vertical-align: bottom;
     border-radius: 5px;
+    overflow: hidden;
 }
 
-.food_cover p{
+.food_cover p {
     font-size: 24px;
     letter-spacing: 0.1em;
     line-height: 1.5em;
     margin-left: 500px;
 }
 
-.card h3{
+.card h3 {
     font-size: 24px;
     letter-spacing: 0.5em;
     line-height: 2em;
 
 }
 
-.card p{
+.card p {
     font-size: 18px;
     letter-spacing: 0.5em;
     line-height: 1.5em;
     margin-top: 5%;
 }
 
-.card2 h3{
+.card2 h3 {
     font-size: 24px;
     letter-spacing: 0.5em;
     line-height: 2em;
+    margin-top: 1%;
 
 }
 
-.card2 p{
+.card2 p {
     font-size: 18px;
     letter-spacing: 0.5em;
     line-height: 1.5em;
     margin-top: 5%;
 }
 
-.row{
+.row {
     /* border: 2px solid red; */
     margin-top: 10%;
 
 }
 
-.card2{
+.card2 {
     margin-left: 8%;
     position: relative;
+
 }
 
-.card{
+.card {
     position: relative;
     /* border: 2px solid red; */
+
 }
 
-.tab1{
+.tab1 {
     position: absolute;
-    top: -7%;
+    top: 0%;
     font-size: 24px;
     background-color: rgba(255, 225, 215);
     padding: 10px;
     border-radius: 5px;
 }
 
-.tab2{
+.tab2 {
     position: absolute;
     right: 0;
-    top: -5%;
-    font-size: 24px;
+    top: 0%;
+    
 }
 
-.card img{
+.tab2 button{
+    font-size: 24px;
+    border: none;
+    background-color: #F5CEA9;
+}
+
+.card img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
-.card2 img{
+.card2 img {
     width: 100%;
-    height: 439px;
-    /* 注意跑版 */
+    height: auto;
     border-radius: 5px;
 }
 
@@ -171,89 +138,71 @@ hr.style-one {
     margin-top: 2%;
 }
 
-.footer_container{
-    width: 100%;
-    margin-top: 10%;
-    display: flex;
-    background-color: rgb(154,84,18,0.9);
-    border-radius: 5px; 
+
+
+@media (width<1200px) {
+    .bannerpic img {
+        height: auto;
+    }
+
+    .food_cover {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .food_intro {
+        margin: 0;
+        height: auto;
+    }
+
+    .food_intro h1 {
+        padding: 5%;
+        font-size: 24px;
+    }
+
+    .food_intro> :first-child {
+        margin-left: 0%;
+    }
+
+    .food_cover p {
+        margin: 10% 15%;
+        font-size: 14px;
+       
+    }
+
+    .row .tab1 {
+        font-size: 14px;
+    }
+
+    .row .tab2 {
+        font-size: 14px;
+    }
+
+    .row h3 {
+        font-size: 14px;
+    }
+
+    .row p {
+        font-size: 12px;
+       
+    }
 }
 
-.footer{
-    width: 1200px; 
-    margin: auto; 
-    display: flex;
-    justify-content: space-between;
-    /* border: 2px solid red; */
+@media (width<768px) {
+    .row h3 {
+        text-align: center;
+    }
 
-}
+    .row p {
+        text-align: center;
+    }
 
-.footer h2{
-    writing-mode: vertical-lr;
-    font-size: 32px;
-    color: white;
-    margin-top: 1%; 
-    letter-spacing: 0.1em;
-}
+    .card2 {
+        margin: 10% 0;
+    }
 
-.footer h3{
-    font-size: 32px;
-    color:white;
-    font-weight: bold;
-    margin-top: 1%;
-    letter-spacing: 0.1em;
-}
-
-.palmy{
-    position: relative; 
-}
-
-.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    /* border: 2px solid red; */
-}
-
-.ig{
-    padding-top: 8%;
-}
-
-.fb{
-    padding-top: 5%;
-    margin-left: 3%;
-}
-
-.footer_p{
-    display: flex;
-    font-size: 24px;
-    margin-top: 2%;
-    letter-spacing: 0.1em;
-    line-height: 1.5em;
-    color: white;
-}
-
-.p2{
-    margin-left: 2%;
-}
-
-.map a{
-    position: absolute;
-    right: 0;
-    top: 48%;
-    text-decoration: none;
-    color: white;
-}
-
-.palmy a:hover{
-    color: black;
-    border-radius: 5px;
-}
-
-iframe{
-    width: 1000px;
-    height: 200px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    .card {
+        margin: 10% 0;
+    }
 }

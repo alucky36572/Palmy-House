@@ -19,6 +19,7 @@ body {
 }
 
 .header img{
+    padding-top: 3%;
     margin: 1%;
 }
 
@@ -278,67 +279,70 @@ body {
 hr.style-one {
     border: 0;
     height: 0;
-    border-top: 3px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     width: 100%;
     margin-top: 2%;
 }
 
-.footer_container{
-    width: 100%;
-    margin-top: 10%;
-    display: flex;
-    background-color: rgb(154,84,18,0.9);
-    border-radius: 5px; 
+.color {
+    background-color: rgb(154, 84, 18, 0.9);
 }
 
-.footer{
-    width: 1200px; 
-    margin: auto; 
+.footer_container {
+    max-width: 1200px;
+
+
+    border-radius: 5px;
+    margin: auto;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 12.5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* border: 2px solid red; */
 
 }
 
-.footer h2{
+.footer h2 {
     writing-mode: vertical-lr;
     font-size: 32px;
     color: white;
-    margin-top: 1%; 
+    margin-top: 1%;
     letter-spacing: 0.1em;
+    margin-right: 5%;
 }
 
-.footer h3{
+.footer h3 {
     font-size: 32px;
-    color:white;
+    color: white;
     font-weight: bold;
     margin-top: 1%;
     letter-spacing: 0.1em;
 }
 
-.palmy{
-    position: relative; 
+.palmy {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 70%;
 }
 
 .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2%;
     display: flex;
     /* border: 2px solid red; */
 }
 
-.ig{
-    padding-top: 8%;
+.ig {
+    padding-left: 5%;
+    box-sizing: border-box;
 }
 
-.fb{
-    padding-top: 5%;
-    margin-left: 3%;
-}
-
-.footer_p{
+.footer_p {
     display: flex;
     font-size: 24px;
     margin-top: 2%;
@@ -347,31 +351,184 @@ hr.style-one {
     color: white;
 }
 
-.p2{
+/* .p2 {
     margin-left: 2%;
+} */
+
+.map {
+    position: relative;
 }
 
-.map a{
+.map_a {
     position: absolute;
     right: 0;
-    top: 48%;
+    top: 0;
+}
+
+.map a {
     text-decoration: none;
     color: white;
 }
 
-.palmy a:hover{
+.palmy a:hover {
     color: black;
     border-radius: 5px;
 }
 
-iframe{
-    width: 1000px;
-    height: 200px;
+iframe {
+    width: 100%;
+    height: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+    vertical-align: bottom;
 }
-
 .required-label::before {
     content: " *";
     color: red;
+}
+
+@media (width<768px) {
+    .header h1{
+        font-size: 28px;
+    }
+
+    .header img{
+        width: 80px;
+    }
+
+    .form{
+        max-width: 100%;
+        margin: 5%;
+        padding: 30px;
+    }
+
+    .form h1{
+        font-size: 24px;
+    }
+
+    .form label{
+        font-size: 18px;
+    }
+
+    .form textarea{
+        width: 100%;
+    }
+
+    #email{
+        width: 100%;
+    }
+
+    .check-in{
+        margin: 5%;
+        /* padding: 30px; */
+        max-width: 100%;
+    }
+
+    .check-in p{
+        font-size: 14px;
+        padding: 30px;
+    }
+
+    .order{
+        margin: 5%;
+        padding: 30px;
+        max-width: 100%;
+    }
+
+    .detail{
+        display: block;
+    }
+
+    .calender img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .people img{
+        width: 15px;
+        height: 15px;
+        margin-top: 3%;
+    }
+
+    .order h2{
+        font-size: 24px;
+    }
+
+    .order h3{
+        font-size: 18px;
+    }
+
+    .order p{
+        font-size: 14px;
+    }
+
+    .order h4{
+        font-size: 18px;
+    }
+
+    .calender p{
+        font-size: 18px;
+        margin: 0 2%;
+    }
+
+    .people p{
+        font-size: 18px;
+        margin: 2% 3%;
+    }
+
+    .room{
+        /* display: block; */
+        max-width: 100%;
+    }
+
+    .room h3{
+        font-size: 14px;
+        padding-top: 10%;
+        padding-left: 2%;
+    }
+
+    .room img{
+        width: 45%;
+        height: auto;
+    }
+
+    .room p{
+        font-size: 14px;
+       
+    }
+
+    .right p{
+        margin-left: 20%;
+    }
+
+    .left{
+        line-height: 1em;
+    }
+
+    .atm{
+        margin: 5%;
+        padding: 30px;
+        max-width: 100%;
+        padding-bottom: 15%;
+    }
+
+    .atm h2{
+        font-size: 24px;
+    }
+
+    .atm label{
+        font-size: 18px;
+    }
+
+    .next a{
+        font-size: 18px;
+        padding: 13px 40px;
+    }
+
+    .back a{
+        font-size: 14px;
+        padding: 16px 30px;
+    }
+
+
 }

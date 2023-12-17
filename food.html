@@ -7,32 +7,56 @@
     <title>美味餐點-Palmy House民宿官方網站</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC:wght@500&display=swap"
         rel="stylesheet">
+        <script src="jquery/jquery-3.7.1.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+        <script src="header.js"></script>
+        <script src="food.js"></script>
 </head>
 
 <body>
     <div class="bannerpic">
         <img src="img/food/austin-ban-IS6RwpuEJpY-unsplash (1) 1 (1).png" alt="餐點封面圖">
     </div>
-    <a href="index.html" id="logo">
-        <img src="img/index/logo.png" alt="logo">
-    </a>
-    <nav>
-        
-        <ul class="flex-nav">
-            <li><a href="room.html">房型介紹</a></li>
-            <li><a href="food.html">美味餐點</a></li>
-            <li><a href="activities.html">活動體驗</a></li>
-            <li><a href="news.html">最新消息</a></li>
-            <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html" target="_blank">線上訂房</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="header">
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header" id="navBoard">
+            <!-- -------------------------------- -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/index/logo.png" alt="logo">
+                </a>
+            </div>
+            
+            <p>Palmy House</p>
+            <!-- -------------------------------- -->
+            <label for="menu-switch" class="hb" id="hamburger-menu">
+                <div class="cross">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                </div>
+            </label>
+            <!-- -------------------------------- -->
+            <nav class="main-nav" >
+                <ul class="flex">
+                    <li><a href="room.html">房型介紹</a></li>
+                    <li><a href="food.html">美味餐點</a></li>
+                    <li><a href="activities.html">活動體驗</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html" target="_blank"
+                        >線上訂房</a></li>
+                </ul>
+            </nav>
+            <!-- -------------------------------- -->
+        </div>
+    </div>
 
     <div class="food_cover">
         <div class="food_intro">
@@ -54,68 +78,81 @@
                 <div class="card">
                     <div class="tab1">葷食</div>
                     <div class="tab2">
-                        <1 / 2>
+                        <button id="btn1" onclick="get_num('1')" disabled>
+                            < </button>
+                                <button id="btn2" onclick="get_num('2')">></button>
+                                <!-- <1 / 2> -->
                     </div>
-                    <img src="img/food/Group 1 (1).png">
+
+                    <img id="gallery" src="img/food/Group 1.png">
+
+
                     <h3>早餐時段:08:00~09:30</h3>
-                    <p>中式九宮格朝食，住房附贈豐盛早餐，有黃金<br>地瓜粥、入味滷肉、拌炒食蔬及營養煎魚搭配<br>溫暖的味噌湯，讓人回味古早的味道，藉由美<br>味的食物夢回最溫暖的回憶中</p>
+                    <p>中式九宮格朝食，住房附贈豐盛早餐，<br>有黃金地瓜粥、入味滷肉、拌炒食蔬及<br>營養煎魚搭配溫暖的味噌湯，讓人回味<br>古早的味道，藉由美味的食物夢回最<br>溫暖的回憶中</p>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="card2">
                     <div class="tab1">素食</div>
                     <div class="tab2">
-                        <1 / 2>
+                        <button id="btn3" onclick="get_img('3')" disabled><</button>
+                        <button id="btn4" onclick="get_img('4')">></button>
                     </div>
-                    <img src="img/food/Group 2 (1).png">
+                    <img id="gallery2" src="img/food/food3.png">
                     <h3>早餐時段:08:00~09:30</h3>
-                    <p>一起找回自然健康的綠色關係，專為素食者準<br>備當季新鮮水果及純天然優格配上一杯鮮榨柳<br>橙汁，開啟一個全新健康美好的早晨</p>
+                    <p>一起找回自然健康的綠色關係，專為素食<br>者準備當季新鮮水果及純天然優格配上一<br>杯鮮榨柳橙汁，開啟一個全新健康美好的<br>早晨</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="footer_container">
-        <div class="footer">
-            <h2>CONTACT</h2>
-            <div class="palmy">
-                <h3>Palmy House</h3>
-                <div class="icon">
-                    <a href="#" class="line">
-                        <img src="img/index/Default (1).png" alt="line icon">
-                    </a>
-                    <a href="#" class="ig">
-                        <img src="img/index/ig (1).png" alt="ig icon">
-                    </a>
-                    <a href="#" class="fb">
-                        <img src="img/index/fb (1).png" alt="fb icon">
-                    </a>
+    <div class="color">
+        <div class="footer_container">
+            <div class="footer">
+                <h2>CONTACT</h2>
+                <div class="palmy">
+                    <h3>Palmy House</h3>
+                    <div class="icon">
+                        <a href="#" class="line">
+                            <img src="img/index/Default (1).png" alt="line icon">
+                        </a>
+                        <a href="#" class="ig">
+                            <img src="img/index/ig (1).png" alt="ig icon">
+                        </a>
+                        <a href="#" class="fb">
+                            <img src="img/index/fb (1).png" alt="fb icon">
+                        </a>
                     </div>
-                <hr class="style-one" />
-                <div class="footer_p">
-                    <div class="p1">
-                        <p>
-                            訂房專線<br>地址<br>客服信箱<br>服務時間
-                        </p>
+                    <hr class="style-one" />
+                    <div class="footer_p">
+                        <div class="p1">
+                            <p>
+                                訂房專線<br>地址<br>客服信箱<br>服務時間
+                            </p>
+                        </div>
+                        <div class="p2">
+                            <p>
+                                +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
+                                palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
+                            </p>
+                        </div>
                     </div>
-                    <div class="p2">
-                        <p>
-                            +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
-                            palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
-                        </p>
+                    <div class="map">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map_a">
+                            <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
+                        </div>
                     </div>
-                </div>
-                <div class="map">
-                    <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </div>
 
+    
 </body>
 
 </html>

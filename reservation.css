@@ -19,6 +19,7 @@ body {
 }
 
 .header img{
+    padding-top: 3%;
     margin: 1%;
 }
 
@@ -42,9 +43,17 @@ body {
     font-size: 24px;
 }
 
+.choice label{
+    margin-top: 3%;
+}
+
 .people p{
     font-size: 18px;
     margin-top: 4%;
+}
+
+.people{
+    margin-top: 1%;
 }
 
 #result{
@@ -77,25 +86,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 } */
 
-#endDate{
-    border: none;
-    background-color: #EAD7C6;
-    border-radius: 5px;
-}
-
-#adults{
-    border: none;
-    background-color: #EAD7C6;
-    border-radius: 5px;
-}
-
-#children{
-    border: none;
-    background-color: #EAD7C6;
-    border-radius: 5px;
-}
-
-#infants{
+#endDate,#adults,#children,#infants{
     border: none;
     background-color: #EAD7C6;
     border-radius: 5px;
@@ -140,7 +131,7 @@ body {
 }
 
 .next{
-    margin-top: 100%;
+    margin-top: 15%;
 }
 
 .next a {
@@ -148,7 +139,7 @@ body {
     color: inherit;
     background-color: rgb(154, 84, 18, 0.78);
     color: white;
-    padding: 16px 110px;
+    padding: 16px 90px;
     position: absolute;
     /* margin-top: 5%; */
     right: 0;
@@ -183,11 +174,12 @@ body {
 }
 
 .family_right{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     width: 300px;
     /* border-left: 2px solid rgb(177, 177, 177,.5) ; */
     position: relative;
+   
 }
 
 .family_bed{
@@ -197,6 +189,7 @@ body {
 
 .family_bed h3{
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .bed{
@@ -265,22 +258,37 @@ body {
     margin-top: 20%;
 }
 
+.table1,.table2,.bottom{
+    width: 300px;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+th,td{
+    padding: 5px;
+}
+
+td{
+    text-align: right;
+}
+
 .p3{
     font-size: 24px;
     color: #9A5412;
 }
 
 .p1{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .right1_content{
-    margin-top: 15%;
+    margin-top: 5%;
     padding-left: 10%;
 }
 
-.right1 h2{
-    padding-left: 10%;
+.right1_content h2{
+    text-align: center;
+    margin: 0;
     /* border: 2px solid red; */
 }
 
@@ -296,67 +304,70 @@ body {
 hr.style-one {
     border: 0;
     height: 0;
-    border-top: 3px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     width: 100%;
-    margin-top: 2%;
+    margin: 0;
 }
 
-.footer_container{
-    width: 100%;
-    margin-top: 5%;
-    display: flex;
-    background-color: rgb(154,84,18,0.9);
-    border-radius: 5px; 
+.color {
+    background-color: rgb(154, 84, 18, 0.9);
 }
 
-.footer{
-    width: 1200px; 
-    margin: auto; 
+.footer_container {
+    max-width: 1200px;
+
+
+    border-radius: 5px;
+    margin: auto;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 12.5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* border: 2px solid red; */
 
 }
 
-.footer h2{
+.footer h2 {
     writing-mode: vertical-lr;
     font-size: 32px;
     color: white;
-    margin-top: 1%; 
+    margin-top: 1%;
     letter-spacing: 0.1em;
+    margin-right: 5%;
 }
 
-.footer h3{
+.footer h3 {
     font-size: 32px;
-    color:white;
+    color: white;
     font-weight: bold;
     margin-top: 1%;
     letter-spacing: 0.1em;
 }
 
-.palmy{
-    position: relative; 
+.palmy {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 70%;
 }
 
 .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2%;
     display: flex;
     /* border: 2px solid red; */
 }
 
-.ig{
-    padding-top: 8%;
+.ig {
+    padding-left: 5%;
+    box-sizing: border-box;
 }
 
-.fb{
-    padding-top: 5%;
-    margin-left: 3%;
-}
-
-.footer_p{
+.footer_p {
     display: flex;
     font-size: 24px;
     margin-top: 2%;
@@ -365,28 +376,185 @@ hr.style-one {
     color: white;
 }
 
-.p2{
+.p2 {
     margin-left: 2%;
 }
 
-.map a{
+.map {
+    position: relative;
+}
+
+.map_a {
     position: absolute;
     right: 0;
-    top: 48%;
+    top: 0;
+}
+
+.map a {
     text-decoration: none;
     color: white;
 }
 
-.palmy a:hover{
+.palmy a:hover {
     color: black;
     border-radius: 5px;
 }
 
-iframe{
-    width: 1000px;
-    height: 200px;
+iframe {
+    width: 100%;
+    height: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+    vertical-align: bottom;
+}
+
+@media (width<768px) {
+    .header h1{
+        font-size: 28px;
+    }
+
+    .header img{
+        width: 80px;
+    }
+    .choice{
+        display: block;
+        font-size: 18px;
+        margin-left: 2%;
+    }
+
+    .choice p{
+        font-size: 14px;
+    }
+
+    .date button{
+        font-size: 14px;
+        margin: 2%;
+        padding: 5px 15px;
+    }
+
+    .room_information h2{
+        font-size: 24px;
+    }
+
+    .room_information h3{
+        font-size: 14px;
+    }
+
+    .family_price{
+        font-size: 14px;
+        margin-top: 3%;
+        justify-content: flex-end;
+
+    }
+
+    .room_information span{
+        font-size: 20px;
+    }
+
+    #count1{
+        font-size: 20px;
+    }
+    #count2{
+        font-size: 20px;
+    }
+    #count3{
+        font-size: 20px;
+    }
+
+    .family_amount p{
+        font-size: 20px;
+    }
+
+    .room_information{
+        display: block;
+    }
+
+    .family{
+        width: 100%;
+        /* margin: auto; */
+    }
+
+    .family_flex{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
+        
+    }
+
+    .family_bed{
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .family_middle{
+        width: 100%;
+    }
+
+    .family_flex h3{
+        padding: 2%;
+        margin: 0;
+    }
+
+    .family_bed img{
+        width:calc(25px);
+        height:calc(5%);
+    }
+
+    .family_amount button{
+        height: 35px;
+        width: 35px;
+        margin: 2%;
+    }
+
+    .family_amount{
+        justify-content: flex-end;
+        margin-top: 3%;
+    }
+
+    .family_right h2{
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .family_right p{
+        font-size: 14px;
+    }
+
+    .right1_content .p1{
+        font-size: 18px;
+    }
+
+    .right2 .p3{
+        font-size: 18px;
+    }
+
+    .family_right{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .right1_content{
+        padding: 0;
+    }
+
+    .family_right .right2{
+        margin-top: 10%;
+    }
+
+    .right1_content button{
+        font-size: 10px;
+        /* margin-left: 6%; */
+    }
+
+    .next a{
+        padding: 10px 100px;
+        margin: 5% 12%;
+        /* font-size: 18px; */
+    }
+
+
 }
 
 

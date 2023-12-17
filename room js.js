@@ -4,3 +4,4 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     // 执行你的 JavaScript 代码，例如：
     console.log('Button clicked!');
 });
+

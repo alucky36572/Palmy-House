@@ -7,12 +7,23 @@
     <title>活動體驗-Palmy House民宿官方網站</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="activities.css">
+    <link rel="stylesheet" href="header_footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC:wght@500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="grid.css">
+    <script src="jquery/jquery-3.7.1.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+        <script src="header.js"></script>
+        <script src="activities.js"></script>
+    <script>
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            document.write('<script src="mobile_ac.js"><\/script>');
+        }
+    </script>
+   
 </head>
 
 <body>
@@ -22,52 +33,108 @@
             <h1>附近好好玩</h1>
         </div>
     </div>
-    <a href="index.html" id="logo">
-        <img src="img/index/logo.png" alt="logo">
-    </a>
-    <nav>
-
-        <ul class="flex-nav">
-            <li><a href="room.html">房型介紹</a></li>
-            <li><a href="food.html">美味餐點</a></li>
-            <li><a href="activities.html">活動體驗</a></li>
-            <li><a href="news.html">最新消息</a></li>
-            <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html" target="_blank">線上訂房</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="header">
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header" id="navBoard">
+            <!-- -------------------------------- -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/index/logo.png" alt="logo">
+                </a>
+            </div>
+            
+            <p>Palmy House</p>
+            <!-- -------------------------------- -->
+            <label for="menu-switch" class="hb" id="hamburger-menu">
+                <div class="cross">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                </div>
+            </label>
+            <!-- -------------------------------- -->
+            <nav class="main-nav" >
+                <ul class="flex">
+                    <li><a href="room.html">房型介紹</a></li>
+                    <li><a href="food.html">美味餐點</a></li>
+                    <li><a href="activities.html">活動體驗</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html" target="_blank"
+                        >線上訂房</a></li>
+                </ul>
+            </nav>
+            <!-- -------------------------------- -->
+        </div>
+    </div>
 
     <div class="fun_content">
-        <div class="attractions">
+        <div class="attractions" id="play1">
             <div class="attractions_text">
                 <h2>Attractions<br>
                     周邊景點</h2>
                 <h3>落雨松秘境</h3>
                 <p>
                     山美水美的宜蘭，最適合落羽松的生長，<br>
-                    藍天之下、遠山與湖畔的落羽松映照在湖面，<br>
+                    藍天之下、遠山與湖畔的落羽松映照在<br>湖面，
                     夢幻景緻就像是人間仙境！
                 </p>
             </div>
             <div class="image-container">
                 <img src="img//activities/tree.png" class="hover-effect" alt="落雨松">
             </div>
-            <a href="#">></a>
+            <button id="btn1" onclick="showAttraction('play2')">></button>
         </div>
 
+        <div class="attractions" id="play2">
+            <button id="btn3" onclick="showAttraction('play1')"><</button>
+            <div class="attractions_text">
+                
+                <h2 class="attr2">Attractions<br>
+                    周邊景點</h2>
+                <h3>太平山國家森林遊樂區</h3>
+                <p>
+                    園區內有知名的鳩之澤溫泉、蹦蹦車，<br>以及多條林木蓊鬱的森林步道。 其中<br>「見晴懷古步道」以及「台灣山毛櫸步道」<br>曾被CNN評選為全球最美的28條小徑。
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="img//activities/mountain (1).png" class="hover-effect" alt="太平山">
+            </div>
+            <button id="btn2" onclick="showAttraction('play3')">></button>
+        </div>
+
+        <div class="attractions" id="play3">
+            <button id="btn4" onclick="showAttraction('play2')"><</button>
+            <div class="attractions_text">
+                
+                <h2 class="attr2">Attractions<br>
+                    周邊景點</h2>
+                <h3>清水地熱</h3>
+                <p>
+                    區內的地熱泉水豐沛滾沸，園區內可以煮食<br>野餐，一邊享用溫泉水煮的美味食物，一邊<br>泡腳欣賞山林美景。
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="img//activities/hotspring.png" class="hover-effect" alt="清水地熱">
+            </div>
+            
+        </div>
+</div>
+    <div class="hot">
         <div class="hot_spot">
             <h2>熱門推薦</h2>
             <hr class="style-one" />
             <div class="spot_title">
-                <button class="button1">私房景點</button>
-                <button class="button2">推薦商家</button>
+                <button class="button1" onclick="togglePages('page1')">私房景點</button>
+                <button class="button2" onclick="togglePages('page2')">推薦商家</button>
             </div>
         </div>
+    </div>
 
         <div class="container">
             <div class="row">
+
                 <div class="col-12 col-md-4">
-                    <div class="card">
+                    <div class="card"id="page1">
                         <a href="https://scenic.goilan.tw/sanxing.php" target="_blank">
                             <img src="img/activities/Rectangle 92 (1).png" class="photo">
                             <h3>三星蔥農場體驗</h3>
@@ -78,7 +145,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <a href="https://scenic.goilan.tw/wujie.php" target="_blank">
-                        <div class="card">
+                        <div class="card"id="page1">
                             <img src="img/activities/Rectangle 95 (1).png" class="photo">
                             <h3>賞鳥趣</h3>
                             <p>多水田、河溝、沙洲沼澤等地形，<br>
@@ -89,7 +156,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <a href="https://ezgo.ardswc.gov.tw/zh-TW/Front/Agri/Detail/2666" target="_blank">
-                        <div class="card">
+                        <div class="card"id="page1">
 
                             <img src="img/activities/Rectangle 98 (1).png" class="photo">
                             <h3>斑比山丘</h3>
@@ -100,7 +167,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <a href="https://scenic.goilan.tw/dongshan.php" target="_blank">
-                        <div class="card">
+                        <div class="card"id="page1">
                             <img src="img/activities/Rectangle 103 (1).png" class="photo">
                             <h3>冬山波波草</h3>
                             <p>位於冬山火車站旁，隸屬冬山生態<br>園區一部分。不僅可貼近波波草，<br>
@@ -111,7 +178,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <a href="https://scenic.goilan.tw/sanxing.php" target="_blank">
-                        <div class="card">
+                        <div class="card"id="page1">
                             <img src="img/activities/Rectangle 104 (1).png" class="photo">
                             <h3>張美阿嬤農場</h3>
                             <p>擁有400坪無敵寬敞空間，以日式<br>造景為主。場內有三類動物區－梅<br>
@@ -122,7 +189,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <a href="https://scenic.goilan.tw/nanao.php" target="_blank">
-                        <div class="card">
+                        <div class="card"id="page1">
                             <img src="img/activities/Rectangle 105 (1).png" class="photo">
                             <h3>粉鳥林</h3>
                             <p>位在烏石鼻附近寧靜的漁港旁，彎弧形的海灣是由沙灘及交研所組成，正好是東澳灣的最南端，擁有獨特隱蔽的地理位置。</p>
@@ -130,10 +197,11 @@
                         </div>
                     </a>
                 </div>
-                <div id="page2" class="hidden">
+
+
                 <div class="col-12 col-md-4">
-                    <a href="https://scenic.goilan.tw/dongshan.php" target="_blank">
-                        <div class="card">
+                    <a href="https://maps.app.goo.gl/tcXaEZwnmBYTjBA36" target="_blank">
+                        <div class="card hidden"id="page2">
                             <img src="img/activities/Rectangle 92 (1) (1).png" class="photo">
                             <h3>好日食光<br> Good Time Brunch</h3>
                             <p>宜蘭特色早午餐</p>
@@ -142,8 +210,8 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a href="https://scenic.goilan.tw/sanxing.php" target="_blank">
-                        <div class="card">
+                    <a href="https://maps.app.goo.gl/BdffDzoXcrRPAKuP6" target="_blank">
+                        <div class="card hidden"id="page2">
                             <img src="img/activities/Rectangle 95 (1) (1).png" class="photo">
                             <h3>來來牛排</h3>
                             <p>來來牛排館是宜蘭超高人氣的排隊美食代表，平假日都需要預約</p>
@@ -152,8 +220,8 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a href="https://scenic.goilan.tw/nanao.php" target="_blank">
-                        <div class="card">
+                    <a href="https://maps.app.goo.gl/J9eYTaEMAdyqZPsh8" target="_blank">
+                        <div class="card hidden"id="page2">
                             <img src="img/activities/Rectangle 98 (1) (1).png" class="photo">
                             <h3>湯蒸火鍋</h3>
                             <p>湯蒸火鍋是網路評價非常好的火鍋<br>餐廳，在 Google 幾千則評分<br>是 4.6 ，人氣非常高。</p>
@@ -161,52 +229,63 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </div>
+   
+
+
+
+    <div class="color">
+        <div class="footer_container">
+            <div class="footer">
+                <h2>CONTACT</h2>
+                <div class="palmy">
+                    <h3>Palmy House</h3>
+                    <div class="icon">
+                        <a href="#" class="line">
+                            <img src="img/index/Default (1).png" alt="line icon">
+                        </a>
+                        <a href="#" class="ig">
+                            <img src="img/index/ig (1).png" alt="ig icon">
+                        </a>
+                        <a href="#" class="fb">
+                            <img src="img/index/fb (1).png" alt="fb icon">
+                        </a>
+                    </div>
+                    <hr class="style-one" />
+                    <div class="footer_p">
+                        <div class="p1">
+                            <p>
+                                訂房專線<br>地址<br>客服信箱<br>服務時間
+                            </p>
+                        </div>
+                        <div class="p2">
+                            <p>
+                                +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
+                                palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
+                            </p>
+                        </div>
+                    </div>
+                    <div class="map">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map_a">
+                            <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </div>
 
-    <div class="footer_container">
-        <div class="footer">
-            <h2>CONTACT</h2>
-            <div class="palmy">
-                <h3>Palmy House</h3>
-                <div class="icon">
-                    <a href="#" class="line">
-                        <img src="img/index/Default (1).png" alt="line icon">
-                    </a>
-                    <a href="#" class="ig">
-                        <img src="img/index/ig (1).png" alt="ig icon">
-                    </a>
-                    <a href="#" class="fb">
-                        <img src="img/index/fb (1).png" alt="fb icon">
-                    </a>
-                </div>
-                <hr class="style-one" />
-                <div class="footer_p">
-                    <div class="p1">
-                        <p>
-                            訂房專線<br>地址<br>客服信箱<br>服務時間
-                        </p>
-                    </div>
-                    <div class="p2">
-                        <p>
-                            +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
-                            palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
-                        </p>
-                    </div>
-                </div>
-                <div class="map">
-                    <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
+    
+    
 
 </body>
 

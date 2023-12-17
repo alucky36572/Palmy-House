@@ -19,7 +19,9 @@
 
 <body>
     <div class="header">
-        <img src="img/index/logo.png" alt="logo">
+        <a href="index.html">
+            <img src="img/index/logo.png" alt="logo">
+        </a>
         <h1>Palmy House</h1>
     </div>
     <div class="banner">
@@ -28,12 +30,12 @@
 
     <div class="choice">
         <div class="date">
-            <label for="startDate">入住日期：</label>
-            <input type="date" id="startDate">
-            
-            <label for="endDate">退房日期：</label>
-            <input type="date" id="endDate">
-
+            <label for="startDate">入住日期：
+                <input type="date" id="startDate">
+            </label>
+            <label for="endDate">退房日期：
+                <input type="date" id="endDate">
+            </label>
             <button onclick="calculateDateDifference()">確認</button>
             <p id="result"></p>
         </div>
@@ -42,6 +44,7 @@
         <div class="people">
             <label for="adults">成人：</label>
             <select id="adults" onchange="updateTotal()">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -104,15 +107,15 @@
                     </div>
 
                     <div class="family_price">
-                        TWD<span>3,800</span>/晚
-                    
+                        TWD<span id="familyRegular">3,800</span>/晚
 
-                    <div class="family_amount">
-                        <button class="minus" onclick="decrease('count1')">-</button>
-                        <span id="count1">0</span>
-                        <button class="plus" onclick="increase('count1')">+</button>
-                        <p>間</p>
-                    </div>
+
+                        <div class="family_amount">
+                            <button class="minus" id="familyMinus" onclick="decrease('count1')">-</button>
+                            <span id="count1">0</span>
+                            <button class="plus" id="familyPlus" onclick="increase('count1')">+</button>
+                            <p>間</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,15 +142,15 @@
                     </div>
 
                     <div class="family_price">
-                        TWD<span>3,000</span>/晚
-                    
+                        TWD<span id="doubleRegular">3,000</span>/晚
 
-                    <div class="family_amount">
-                        <button class="minus" onclick="decrease('count2')">-</button>
-                        <span id="count2">0</span>
-                        <button class="plus" onclick="increase('count2')">+</button>
-                        <p>間</p>
-                    </div>
+
+                        <div class="family_amount">
+                            <button class="minus" id="doubleMinus" onclick="decrease('count2')">-</button>
+                            <span id="count2">0</span>
+                            <button class="plus" id="doublePlus" onclick="increase('count2')">+</button>
+                            <p>間</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,13 +177,13 @@
                     </div>
 
                     <div class="family_price">
-                        TWD<span>2,000</span>/晚
+                        TWD<span id="singleRegular">2,000</span>/晚
                     </div>
 
                     <div class="family_amount">
-                        <button class="minus" onclick="decrease('count3')">-</button>
+                        <button class="minus" id="singleMinus" onclick="decrease('count3')">-</button>
                         <span id="count3">0</span>
-                        <button class="plus" onclick="increase('count3')">+</button>
+                        <button class="plus" id="singlePlus" onclick="increase('count3')">+</button>
                         <p>間</p>
                     </div>
                 </div>
@@ -188,16 +191,96 @@
         </div>
         <div class="family_right">
 
-            <div class="right1">
-                <h2>手掌房</h2>
-                <div class="right1_content">
-                    <p>房間數</p>
-                    <p class="p1">TWD3,800</p>
-                    <p>總價</p>
-                    <hr class="style-one" />
-                    <p class="p1">總價</p>
-                    <p>付款金額(訂金)</p>
-                    <p>剩餘尾款<br>(現場付清)</p>
+
+
+            <div class="right1_content">
+                <div class="familyBottom" style="display: none;">
+                    <h2>手掌房</h2>
+                    <table class="table1">
+                        <tr>
+                            <th>房間數</th>
+                            <td>x1間</td>
+                        </tr>
+                        <tr>
+                            <th class="p1">TWD3,800</th>
+                            <td>
+                                <p id="nights1"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>總價</th>
+                            <td>
+                                <p id="regular1"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="doubleBottom" style="display: none;">
+                    <h2>手心房</h2>
+                    <table class="table1">
+                        <tr>
+                            <th>房間數</th>
+                            <td>x1間</td>
+                        </tr>
+                        <tr>
+                            <th class="p1">TWD3,000</th>
+                            <td>
+                                <p id="nights2"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>總價</th>
+                            <td>
+                                <p id="regular2"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="singleBottom" style="display: none;">
+                    <h2>手指房</h2>
+                    <table class="table1">
+                        <tr>
+                            <th>房間數</th>
+                            <td>x1間</td>
+                        </tr>
+                        <tr>
+                            <th class="p1">TWD2,000</th>
+                            <td>
+                                <p id="nights3"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>總價</th>
+                            <td>
+                                <p id="regular3"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <hr class="style-one" />
+                <div class="bottom">
+                    <table class="table2">
+                        <tr>
+                            <th>總價</th>
+                            <td class="p1">
+                                <p id="regularTotal"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>付款金額(訂金)</th>
+                            <td>
+                                <p id="deposit"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>剩餘尾款<br>(現場付清)</th>
+                            <td>
+                                <p id="finalpay"></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
                     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         data-bs-title="消費者通知於預定住宿日 14 日前到達者，得請求民宿退還已付訂金 100 ％。
         消費者通知於預定住宿日當日到達或怠於通知者，民宿得不退還消費者已付全部訂金。">
@@ -205,61 +288,58 @@
                     </button>
                 </div>
             </div>
-            <div class="right2">
-                
-                <p>x1間</p>
-                <p>x1晚</p>
-                <p class="p3">TWD3,800</p>
-                <hr class="style-one" />
-                <p class="p3">TWD3,800</p>
-                <p>TWD1,140</p>
-                <p>TWD2,660</p>
-                
-                <div class="next">
-                    <a href="information.html">下一步</a>
-                </div>
 
+
+            <div class="next">
+                <a href="information.html" id="nextstep">下一步</a>
             </div>
-            
+
+
+
         </div>
     </div>
 
-    <div class="footer_container">
-        <div class="footer">
-            <h2>CONTACT</h2>
-            <div class="palmy">
-                <h3>Palmy House</h3>
-                <div class="icon">
-                    <a href="#" class="line">
-                        <img src="img/index/Default (1).png" alt="line icon">
-                    </a>
-                    <a href="#" class="ig">
-                        <img src="img/index/ig (1).png" alt="ig icon">
-                    </a>
-                    <a href="#" class="fb">
-                        <img src="img/index/fb (1).png" alt="fb icon">
-                    </a>
+    <div class="color">
+        <div class="footer_container">
+            <div class="footer">
+                <h2>CONTACT</h2>
+                <div class="palmy">
+                    <h3>Palmy House</h3>
+                    <div class="icon">
+                        <a href="#" class="line">
+                            <img src="img/index/Default (1).png" alt="line icon">
+                        </a>
+                        <a href="#" class="ig">
+                            <img src="img/index/ig (1).png" alt="ig icon">
+                        </a>
+                        <a href="#" class="fb">
+                            <img src="img/index/fb (1).png" alt="fb icon">
+                        </a>
                     </div>
-                <hr class="style-one" />
-                <div class="footer_p">
-                    <div class="p1">
-                        <p>
-                            訂房專線<br>地址<br>客服信箱<br>服務時間
-                        </p>
+                    <hr class="style-one" />
+                    <div class="footer_p">
+                        <div class="p1">
+                            <p>
+                                訂房專線<br>地址<br>客服信箱<br>服務時間
+                            </p>
+                        </div>
+                        <div class="p2">
+                            <p>
+                                +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
+                                palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
+                            </p>
+                        </div>
                     </div>
-                    <div class="p2">
-                        <p>
-                            +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
-                            palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
-                        </p>
+                    <div class="map">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map_a">
+                            <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
+                        </div>
                     </div>
-                </div>
-                <div class="map">
-                    <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -279,6 +359,9 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+
     </script>
 
 </body>

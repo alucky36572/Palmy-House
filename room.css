@@ -1,8 +1,3 @@
-body {
-    font-family: 'Noto Serif TC', serif;
-    background-color: #FDF3E5;
-}
-
 html,body{
     scroll-behavior: smooth;
 }
@@ -53,55 +48,11 @@ html,body{
     background-color: rgba(178, 113, 51, 0.7);
 }
 
-#logo img {
-    margin-left: 20px;
-    width: 100px;
-    position: absolute;
-    top: 10px;
-    position: fixed;
-}
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 90%;
-    right: 0;
-    background: rgba(246, 190, 177, .5);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    z-index: 2;
-}
-
-ul,
-li,
-ul li a {
-    height: 100%;
-    line-height: 100px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    font-size: 24px;
-    letter-spacing: 0.1em;
-}
-
-ul li a:hover {
-    background-color: #F6BEB1;
-    color: white;
-}
-
-.flex-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
 
 .room_header {
     /* border: 2px solid red; */
-    width: 1200px;
+    max-width:1200px;
     margin: auto;
 }
 
@@ -109,16 +60,18 @@ ul li a:hover {
     /* border: 2px solid red; */
     display: flex;
     align-items: center;
+    width: 90%;
 
 }
 
 .room_intro> :first-child {
     margin-right: -10%;
+    margin-top: 10%;
 }
 
 .room_intro_word {
     background-color: rgb(255, 255, 255, 0.5);
-    width: 55%;
+    width: 50%;
     flex-shrink: 0;
     padding: 50px 30px;
     box-sizing: border-box;
@@ -127,10 +80,11 @@ ul li a:hover {
 }
 
 .room_intro_img {
-    width: 55%;
+    width: 50vh;
     flex-shrink: 0;
     vertical-align: bottom;
     margin-top: 10%;
+    object-fit: cover;
 
 }
 
@@ -236,7 +190,7 @@ hr.style-one {
 }
 
 .quadruple_room_img{
-    max-width: 1400px;
+    max-width: 1314px;
     margin: auto;
 }
 
@@ -254,7 +208,50 @@ hr.style-one {
     vertical-align: bottom;
     display: flex;
     /* border: 2px solid red; */
+    
+}
 
+.quadruple_img_small img{
+    width:calc(100%) ;
+    height: auto;
+}
+
+#sliderBoard1{
+    width: 100%;
+    overflow: hidden;
+}
+
+#sliderBoard1 ul{
+    width: 2628px;
+    position: relative;
+    animation: slider 15s infinite linear ;
+    display: flex;
+   
+}
+
+#sliderBoard1 ul:hover{
+    animation-play-state:paused;
+  }
+
+#sliderBoard1 li{
+    width: 219px;
+    height: 250px;
+    float: left;
+
+}
+
+/* #sliderBoard li img{
+    width: 100%;
+} */
+
+@keyframes slider{
+	0% { left: 0; }
+    16.666% { left: -219px; }
+    33.333% { left: -438px; }
+    50% { left: -657px; }
+    66.666% { left: -876px; }
+    83.333% { left: -1095px; }
+    100% { left: -1314px; }
 }
 
 .quadruple_content {
@@ -317,7 +314,13 @@ hr.style-one {
     font-size: 18px;
     line-height: 1.5em;
     padding: 10px;
+    box-sizing: border-box;
 
+}
+
+.quadruple_tools table td img{
+    width:calc(50%) ;
+    height: auto;
 }
 
 .double_room h2 {
@@ -353,19 +356,23 @@ hr.style-one {
     margin-top: 2%;
 }
 
-.footer_container {
-    width: 100%;
-    margin-top: 5%;
-    display: flex;
+.color {
     background-color: rgb(154, 84, 18, 0.9);
+}
+
+.footer_container {
+    max-width: 1200px;
+
+
     border-radius: 5px;
+    margin: auto;
 }
 
 .footer {
-    width: 1200px;
-    margin: auto;
+    width: 100%;
+    margin-top: 12.5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* border: 2px solid red; */
 
 }
@@ -376,6 +383,7 @@ hr.style-one {
     color: white;
     margin-top: 1%;
     letter-spacing: 0.1em;
+    margin-right: 5%;
 }
 
 .footer h3 {
@@ -388,23 +396,21 @@ hr.style-one {
 
 .palmy {
     position: relative;
+    /* border: 2px solid red; */
+    width: 70%;
 }
 
 .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2%;
     display: flex;
     /* border: 2px solid red; */
 }
 
-.ig{
-    padding-top: 8%;
-}
-
-.fb{
-    padding-top: 5%;
-    margin-left: 3%;
+.ig {
+    padding-left: 5%;
+    box-sizing: border-box;
 }
 
 .footer_p {
@@ -420,10 +426,17 @@ hr.style-one {
     margin-left: 2%;
 }
 
-.map a {
+.map {
+    position: relative;
+}
+
+.map_a {
     position: absolute;
     right: 0;
-    top: 48%;
+    top: 0;
+}
+
+.map a {
     text-decoration: none;
     color: white;
 }
@@ -434,10 +447,11 @@ hr.style-one {
 }
 
 iframe {
-    width: 1000px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+    vertical-align: bottom;
 }
 
 .notice h2 {
@@ -474,4 +488,128 @@ iframe {
     font-size: 18px;
     letter-spacing: 0.1em;
     line-height: 2em;
+}
+
+@media (width<768px) {
+    .room_header{
+        max-width: 100%;
+        margin-top: 10%;
+    }
+
+    .room_intro img{
+        width: 100%;
+    }
+
+    .room_intro_word h1{
+        font-size: 24px;
+    }
+
+    .room_intro_word p{
+        font-size: 14px;
+    }
+
+    .room_intro_word{
+        padding: 0;
+        text-align: center;
+
+    }
+
+    .anchor{
+        display: none;
+    }
+
+    .quadruple_room h2{
+        font-size: 24px;
+    }
+
+    .double_room h2{
+        font-size: 24px;
+    }
+
+    .single_room h2{
+        font-size: 24px;
+    }
+
+    .quadruple_content h3{
+        font-size: 18px;
+    }
+
+    .quadruple_content p{
+        font-size: 14px;
+    }
+
+    .quadruple_tools p{
+        font-size: 12px;
+    }
+
+    .btn{
+        font-size: 18px;
+        display: block;
+        padding: 0;
+        margin-left: 50%;
+        margin-top: 5%;
+        /* transform: none;
+        transition: none; */
+    }
+
+    .btn:before{
+        width: 40px;
+        height: 40px;
+    }
+
+    hr.style-one {
+        margin-top: 7%;
+    }
+
+    .quadruple_price{
+        /* display: block; */
+        /* white-space: normal; */
+        padding: 5%;
+    }
+
+    .quadruple_tools{
+        /* display: block; */
+        padding: 5%;
+    }
+
+    .quadruple_tools table{
+        margin-top: 5%;
+    }
+
+    .quadruple_room{
+        margin-top: 10%;
+        padding: 0;
+    }
+    .double_room{
+        margin-top: 10%;
+        padding: 0;
+    }
+    .single_room{
+        margin-top: 10%;
+        padding: 0;
+    }
+
+    .notice h2{
+        font-size: 24px;
+        margin-left: 2%;
+    }
+
+    .notice h3{
+        font-size: 14px;
+    }
+
+    .notice p{
+        font-size: 12px;
+    }
+
+    .notice_content{
+        padding: 5%;
+        display: block;
+    }
+
+    .quadruple_img_small img{
+        height: 200px;
+    }
+
+
 }

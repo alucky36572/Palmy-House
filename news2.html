@@ -7,11 +7,15 @@
     <title>促銷方案-Palmy House民宿官方網站</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="news2.css">
+    <link rel="stylesheet" href="header_footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC:wght@500&display=swap"
         rel="stylesheet">
+        <script src="jquery/jquery-3.7.1.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+        <script src="header.js"></script>
 </head>
 
 <body>
@@ -19,19 +23,39 @@
         <img src="img/news/markus-winkler-aId-xYRTlEc-unsplash 2.png" alt="消息內頁封面圖">
     </div>
 
-    <nav>
-        <a href="index.html" id="logo">
-            <img src="img/index/logo.png" alt="logo">
-        </a>
-        <ul class="flex-nav">
-            <li><a href="room.html">房型介紹</a></li>
-            <li><a href="food.html">美味餐點</a></li>
-            <li><a href="activities.html">活動體驗</a></li>
-            <li><a href="news.html">最新消息</a></li>
-            <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html" target="_blank">線上訂房</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="header">
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header" id="navBoard">
+            <!-- -------------------------------- -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/index/logo.png" alt="logo">
+                </a>
+            </div>
+            
+            <p>Palmy House</p>
+            <!-- -------------------------------- -->
+            <label for="menu-switch" class="hb" id="hamburger-menu">
+                <div class="cross">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                </div>
+            </label>
+            <!-- -------------------------------- -->
+            <nav class="main-nav" >
+                <ul class="flex">
+                    <li><a href="room.html">房型介紹</a></li>
+                    <li><a href="food.html">美味餐點</a></li>
+                    <li><a href="activities.html">活動體驗</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li style="background-color: rgb(247, 214, 130,0.5);"><a href="reservation.html" target="_blank"
+                        >線上訂房</a></li>
+                </ul>
+            </nav>
+            <!-- -------------------------------- -->
+        </div>
+    </div>
 
     <div class="circle">
         <div class="circle_img">
@@ -53,42 +77,47 @@
         </div>
     </div>
 
-    <div class="footer_container">
-        <div class="footer">
-            <h2>CONTACT</h2>
-            <div class="palmy">
-                <h3>Palmy House</h3>
-                <div class="icon">
-                    <a href="#" class="line">
-                        <img src="img/index/Default (1).png" alt="line icon">
-                    </a>
-                    <a href="#" class="ig">
-                        <img src="img/index/ig (1).png" alt="ig icon">
-                    </a>
-                    <a href="#" class="fb">
-                        <img src="img/index/fb (1).png" alt="fb icon">
-                    </a>
+    <div class="color">
+        <div class="footer_container">
+            <div class="footer">
+                <h2>CONTACT</h2>
+                <div class="palmy">
+                    <h3>Palmy House</h3>
+                    <div class="icon">
+                        <a href="#" class="line">
+                            <img src="img/index/Default (1).png" alt="line icon">
+                        </a>
+                        <a href="#" class="ig">
+                            <img src="img/index/ig (1).png" alt="ig icon">
+                        </a>
+                        <a href="#" class="fb">
+                            <img src="img/index/fb (1).png" alt="fb icon">
+                        </a>
                     </div>
-                <hr class="style-one" />
-                <div class="footer_p">
-                    <div class="p1">
-                        <p>
-                            訂房專線<br>地址<br>客服信箱<br>服務時間
-                        </p>
+                    <hr class="style-one" />
+                    <div class="footer_p">
+                        <div class="p1">
+                            <p>
+                                訂房專線<br>地址<br>客服信箱<br>服務時間
+                            </p>
+                        </div>
+                        <div class="p2">
+                            <p>
+                                +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
+                                palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
+                            </p>
+                        </div>
                     </div>
-                    <div class="p2">
-                        <p>
-                            +886-252566188<br>宜蘭縣五結鄉親河路二段291巷51弄57號<br>
-                            palmyhouse@gmail.com<br>09:30~12:00 / 13:00~18:30
-                        </p>
+                    <div class="map">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map_a">
+                            <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
+                        </div>
                     </div>
-                </div>
-                <div class="map">
-                    <a href="https://maps.app.goo.gl/QcnttqNcyrtN2RQ86" target="_blank">GOOGLE MAP ></a>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453.20196980769464!2d121.80511055336841!3d24.671350945229033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1700554778893!5m2!1szh-TW!2stw"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

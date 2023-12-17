@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="choice">
+        <div class="date">
+            <label for="startDate">入住日期：</label>
+            <input type="date" id="startDate">
+
+            <label for="endDate">退房日期：
+                <input type="date" id="endDate">
+            </label>
+            <button onclick="calculateDateDifference()">確認</button>
+            <p id="result"></p>
+        </div>
+        </div>
+    <script>
+function calculateDateDifference() {
+    var startDate = new Date(document.getElementById("startDate").value);
+    var endDate = new Date(document.getElementById("endDate").value);
+
+    var daysDifference = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+    var nightsDifference = Math.max(daysDifference, 1);
+
+    // 假设 holidays 是您定义的假日数组，格式为 ["YYYY-MM-DD", "YYYY-MM-DD", ...]
+    // 请替换为实际的假日日期
+    var holidays = ["2024-12-23"];
+
+    // 根据入住日期和退房日期是否在假日范围内应用不同的价格逻辑
+    var basePrice = 100; // 请替换为实际的基础价格
+    var holidayPriceMultiplier = 1.5; // 请替换为实际的假日价格倍数
+
+    var totalPrice = 0;
+
+    for (var d = new Date(startDate); d < endDate; d.setDate(d.getDate() + 1)) {
+        var nightlyPrice = holidays.includes(getFormattedDate(d)) ? basePrice * holidayPriceMultiplier : basePrice;
+        totalPrice += nightlyPrice;
+    }
+
+    // 显示结果
+    document.getElementById("result").innerHTML = (daysDifference + 1) + " 天 " + nightsDifference + " 晚，总价格：" + totalPrice + " 元";
+}
+
+// 辅助函数，获取格式化的日期字符串（不包含时间）
+function getFormattedDate(date) {
+    var year = date.getFullYear();
+    var month = String(date.getMonth() + 1).padStart(2, '0');
+    var day = String(date.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+}
+
+
+</script>
+</body>
+</html>
