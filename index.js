@@ -107,9 +107,9 @@ $(function () {
         });
     });
 
-    // 移动设备上滚动事件处理逻辑
+    // 手機上滾動事件處理
     $(window).on('scroll touchmove', function () {
-        // 根据需要执行滚动事件的逻辑
+        
     });
 });
 

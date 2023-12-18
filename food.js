@@ -1,5 +1,5 @@
-let currentButton = 'btn1'; // 初始状态下，禁用 'btn1'
-let currentButton2 = 'btn3'; // 初始状态下，禁用 'btn3'
+let currentButton = 'btn1'; // 初始狀態，禁用 'btn1'
+let currentButton2 = 'btn3'; // 初始狀態，禁用 'btn3'
 
 function get_num(num) {
     document.getElementById('gallery').src = 'img/food/Group ' + num + '.png';
@@ -29,7 +29,7 @@ function get_img(img) {
     }
 }
 
-// 页面加载时调用一次，传递参数 1
+//頁面加載時刷新一次，傳遞參數 1
 window.onload = function () {
     get_num(1);
     get_img(3);

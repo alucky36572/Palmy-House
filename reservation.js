@@ -1,89 +1,89 @@
 function calculateDateDifference() {
-    // 获取开始日期和结束日期的输入值
+    // 獲取開始日期和結束日期的值
     var startDateInput = document.getElementById("startDate");
     var endDateInput = document.getElementById("endDate");
 
 
 
-    // 获取今天的日期
+    // 今天的日期
     var today = new Date();
-    today.setHours(0, 0, 0, 0); // 将时间部分设为0，以便只比较日期
+    today.setHours(0, 0, 0, 0); // 時間都設為0，以便只比較日期
 
-    // 获取60天后的日期
+    // 60天後的日期
     var maxDate = new Date(today);
     maxDate.setDate(today.getDate() + 60);
 
-    // 将输入值转换为日期对象
+    // 輸入值轉換為日期對象
     var startDate = new Date(startDateInput.value);
     var endDate = new Date(endDateInput.value);
     // var startClear = startDateInput.value = "";
     // var endClear = endDateInput.value = "";
 
-    // 检查日期有效性
+    // 檢查日期有效性
     if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
         alert("請選擇入住及退房日期");
 
         return;
     }
 
-    // 检查入住日期不能在今天之前
+    // 檢查入住日期不能在今天之前
     if (startDate < today) {
         alert("不能選擇今天以前的日期");
 
         return;
     }
 
-    // 检查入住日期和退房日期不能是同一天
+    // 檢查入住日期和退房日期不能是同一天
     if (startDate.getTime() === endDate.getTime()) {
         alert("入住日期和退房日期不能是同一天");
 
         return;
     }
 
-    // 检查退房日期不能在60天后
+    // 檢查退房日期不能在60天後
     if (startDate > maxDate) {
         alert("60天後的訂房還未開放");
 
         return;
     }
 
-    // 检查结束日期不能在开始日期之前
+    // 檢查结束日期不能在開始日期之前
     if (endDate < startDate) {
         alert("退房日期不能在入住日期之前");
 
         return;
     }
 
-    // 计算日期差异（以毫秒为单位）
+    // 計算日期差異（以毫秒为单位）
     var timeDifference = endDate - startDate;
 
-    // 转换为天数
+    // 轉換為天數
     var daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
     var nightsDifference = Math.max(daysDifference, 1);
 
     document.getElementById("result").innerHTML = (daysDifference + 1) + " 天 " + nightsDifference + " 晚";
 
 
-    // 获取包含价格的元素的数组
+    // 包含價格元素的陣列
     var priceElements = [
         document.getElementById("familyRegular"),
         document.getElementById("doubleRegular"),
         document.getElementById("singleRegular")
     ];
 
-    // 遍历元素数组，处理每个房间的信息
+    // 抓取元素陣列，處理每個房間的資訊
     priceElements.forEach(function (priceElement, index) {
         if (priceElement) {
-            // 获取元素的文本内容
+            // 元素的文字内容
             var priceText = priceElement.innerText;
-            // 提取数字部分
+            // 提取數字部分
             var priceValue = parseFloat(priceText.replace(",", ""));
             var totalPrice = priceValue * nightsDifference;
 
-            // 更新显示晚数的元素
+            // 更新顯示幾晚
             document.getElementById("nights" + (index + 1)).innerHTML = "X" + nightsDifference + "晚";
 
-            // 更新显示总价的元素
+            // 更新顯示總價
             document.getElementById("regular" + (index + 1)).innerHTML = "TWD" + totalPrice.toLocaleString();
 
         }
@@ -93,20 +93,20 @@ function calculateDateDifference() {
 }
 
 function updateTotal() {
-    // 获取每个下拉选择框的值
+    // 獲取每個下拉選單的值
     var adults = parseInt(document.getElementById("adults").value);
     var children = parseInt(document.getElementById("children").value);
     var infants = parseInt(document.getElementById("infants").value);
 
-    // 计算总人数
+    // 計算總人數
     var total = adults + children + infants;
 
-    // 如果总人数超过7，则重置下拉框的值
+    // 如果總人數超過7，則重置下拉框的值
     if (total > 7) {
         alert("總人數最多7位哦！");
         resetValues();
     } else {
-        // 更新显示结果
+        // 更新顯示结果
         document.getElementById("total").innerHTML = total;
         console.log("Total updated:", total);
     }
@@ -120,8 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         count3: 0
     };
 
-    // // 繼續執行頁面初始化
-    // var elements;
+
     // 定義通用的函數
     function configureCounterButtons(buttonPlusId, buttonMinusId, elementsClassName, counterId) {
         let plusButton = document.getElementById(buttonPlusId);
@@ -170,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         let nextButton = document.getElementById("nextstep");
         nextButton.onclick = function nextpage(event) {
-            // 检查房型是否选择
+            //檢查房型是否選擇
             if (counters.count1 === 0 && counters.count2 === 0 && counters.count3 === 0) {
                 alert("至少選擇一個房型哦");
                 event.preventDefault();
@@ -179,11 +178,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             updateTotal();
     
-    // 获取总人数
+    // 獲取總人數
     var totalSpan = document.getElementById("total");
     var totalNumber = parseInt(totalSpan.textContent);
 
-    // 检查是否至少选择了一个人
+    // 檢查是否至少選擇一人
     if (totalNumber === 0) {
         alert("請選擇入住人數");
         event.preventDefault();
@@ -197,8 +196,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var endDateInput = document.getElementById("endDate");
         return startDateInput.value && endDateInput.value;
     }
-
-    // 頁面初始化的其餘代碼...
 
     function updateCount(id) {
         console.log(`Updating count ${id} to ${counters[id]}`);
@@ -279,12 +276,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function resetValues() {
-    // 将下拉框的值重置为0
+    // 下拉框的值重置為0
     document.getElementById("adults").value = "0";
     document.getElementById("children").value = "0";
     document.getElementById("infants").value = "0";
 
-    // 更新显示结果
     document.getElementById("total").innerHTML = "0";
 }
 
