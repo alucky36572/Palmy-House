@@ -189,12 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         return;
     }
-
-
-
-            
         };
-
 
     }
     function isDateSelected() {

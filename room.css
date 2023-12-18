@@ -297,6 +297,14 @@ hr.style-one {
 
 }
 
+.tool_m{
+    display: none;
+}
+
+.quadruple_tools_m{
+    display: none;
+}
+
 .quadruple_tools {
     padding: 50px;
     display: flex;
@@ -319,7 +327,7 @@ hr.style-one {
 }
 
 .quadruple_tools table td img{
-    width:calc(50%) ;
+    /* width:calc(50%) ; */
     height: auto;
 }
 
@@ -490,10 +498,10 @@ iframe {
     line-height: 2em;
 }
 
-@media (width<768px) {
+@media (max-width:768px) {
     .room_header{
         max-width: 100%;
-        margin-top: 10%;
+        margin-top: 20%;
     }
 
     .room_intro_img{
@@ -509,13 +517,17 @@ iframe {
     }
 
     .room_intro_word p{
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .room_intro_word{
-        padding: 0;
+        padding: 1%;
         text-align: center;
+        /* margin-left: 2%; */
 
+    }
+    #sliderBoard1 ul:hover {
+        animation-play-state: running; /* 修改為 running，使動畫繼續執行 */
     }
 
     .anchor{
@@ -542,7 +554,28 @@ iframe {
         font-size: 14px;
     }
 
-    .quadruple_tools p{
+    .quadruple_tools{
+        display: none;
+    }
+
+    .tool_m{
+        display: block;
+    }
+
+    .quadruple_tools_m{
+        display: block;
+    }
+
+    .tool_m h3{
+        
+        padding: 5%;
+        margin-top: 5%;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+    line-height: 2em;
+    }
+
+    .quadruple_tools_m p{
         font-size: 12px;
     }
 
@@ -559,10 +592,11 @@ iframe {
     .btn:before{
         width: 40px;
         height: 40px;
+
     }
 
-    hr.style-one {
-        margin-top: 7%;
+    .quadruple_content hr.style-one {
+       display: none;
     }
 
     .quadruple_price{
@@ -571,13 +605,30 @@ iframe {
         padding: 5%;
     }
 
-    .quadruple_tools{
+    .quadruple_tools_m{
         /* display: block; */
         padding: 5%;
+        /* margin-top: 5%; */
+        text-align: center;
     }
 
-    .quadruple_tools table{
-        margin-top: 5%;
+    .quadruple_tools_m table{
+        margin:auto;
+    }
+
+    .quadruple_tools_m table td{
+        text-align: center;
+        vertical-align: bottom;
+        letter-spacing: 0.1em;
+        font-size: 18px;
+        line-height: 1.5em;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .quadruple_tools_m table td img{
+        width:40px ;
+        box-sizing: border-box;
     }
 
     .quadruple_room{

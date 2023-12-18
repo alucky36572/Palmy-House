@@ -69,6 +69,7 @@ body {
     cursor: pointer;
     border-radius: 4px;
     background-color: #F5CEA9;
+    color: black;
     
 }
 
@@ -76,20 +77,22 @@ body {
     background-color: #D9B18C;
 }
 
-#startDate{
+#startDate, #endDate{
     border: none;
     background-color: #EAD7C6;
     border-radius: 5px;
+    color: black;
 }
 
 /* #starDate:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 } */
 
-#endDate,#adults,#children,#infants{
+#adults,#children,#infants{
     border: none;
     background-color: #EAD7C6;
     border-radius: 5px;
+    color: black;
 }
 
 .room_information{
@@ -226,6 +229,7 @@ body {
 
 #count3{
     font-size: 32px;
+    color: black;
     
 }
 
@@ -248,10 +252,12 @@ body {
 
 .family_amount .minus{
     background-color: #EAD7C6;
+    color: black;
 }
 
 .family_amount .plus{
     background-color: #F5CEA9;
+
 }
 
 .family_right .right2{
@@ -303,7 +309,7 @@ td{
 
 
 
-@media (width<768px) {
+@media (max-width:768px) {
     .header h1{
         font-size: 28px;
     }

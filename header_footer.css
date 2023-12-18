@@ -26,6 +26,7 @@ body {
     left: 1%;
     position: fixed;
     z-index: 2;
+    margin: 1%;
 }
 
 #navBoard {
@@ -54,6 +55,7 @@ body {
     right: 1%;
     position: fixed;
     z-index: 2;
+    cursor: pointer;
 }
 
 .hb .bar {
@@ -244,13 +246,9 @@ iframe {
 }
 
 @media (width < 1200px) {
-
-    /* .bannerpic img{
-        width: 100%;
-        height: auto;
-
+    /* .main-header{
+        background-color: rgb(255, 220, 212);
     } */
-
     
     
     #hamburger-menu .bar:nth-child(1) {
@@ -296,7 +294,6 @@ iframe {
 
     .main-nav li a {
         display: block;
-        padding: 5px;
         font-size: 20px;
 
 

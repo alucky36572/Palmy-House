@@ -74,7 +74,7 @@
     font-size: 18px;
     letter-spacing: 0.5em;
     line-height: 1.5em;
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 .row {
@@ -115,6 +115,7 @@
     font-size: 24px;
     border: none;
     background-color: #F5CEA9;
+  
 }
 
 .card img {
@@ -140,7 +141,7 @@ hr.style-one {
 
 
 
-@media (width<1200px) {
+@media (max-width:1200px) {
     .bannerpic img {
         height: auto;
     }
@@ -189,7 +190,7 @@ hr.style-one {
     }
 }
 
-@media (width<768px) {
+@media (max-width:768px) {
     .row h3 {
         text-align: center;
     }

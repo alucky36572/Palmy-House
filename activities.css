@@ -215,7 +215,7 @@
 }
 
 
-@media (width<768px) {
+@media (max-width:768px) {
     .fun_cover{
         max-width: 100%;
         height: auto;
@@ -223,15 +223,16 @@
 
     .fun_intro{
         justify-content: flex-start;
-        margin-top: 15%;
+        margin-top: 20%;
         max-width: 100%;
         height: auto;
     }
 
     .fun_intro h1{
-        padding: 10%;
+        padding: 2%;
         font-size: 24px;
         box-sizing: border-box;
+        
     }
 
     .fun_intro img{
@@ -248,7 +249,7 @@
 
     .fun_content h3{
         font-size: 18px;
-        text-underline-offset: 10%;
+        text-underline-offset: 2%;
         margin-top: 5%;
     }
 

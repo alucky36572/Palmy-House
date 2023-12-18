@@ -221,7 +221,7 @@ iframe {
     vertical-align: bottom;
 }
 
-@media (width<768px) {
+@media (max-width:768px) {
     .card{
         height: 400px;
     }
