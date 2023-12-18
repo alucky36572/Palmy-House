@@ -73,7 +73,7 @@
     font-size: 24px;
     letter-spacing: 0.1em;
     text-decoration-line: underline;
-    text-underline-offset: 20px;
+    text-underline-offset: 10px;
 
 }
 
@@ -229,7 +229,7 @@
     }
 
     .fun_intro h1{
-        padding: 2%;
+        padding: 1%;
         font-size: 24px;
         box-sizing: border-box;
         
