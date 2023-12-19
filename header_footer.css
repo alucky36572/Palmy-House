@@ -56,6 +56,7 @@ body {
     position: fixed;
     z-index: 2;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .hb .bar {
@@ -63,7 +64,7 @@ body {
     display: inline-block;
     width: 40px;
     height: 2px;
- 
+    border-radius: 5px;
     background-color: rgba(246, 190, 177);
     transition: transform 0.3s ease-in-out;
     /* border: 1px solid red;  */
@@ -237,6 +238,7 @@ iframe {
         align-items: center;
         height: 100px;
         z-index: 2;
+        border-radius: 5px;
     }
 
     .main-nav li:hover {
@@ -280,6 +282,7 @@ iframe {
         width: 100%;
         display: none;
         background-color: rgb(255, 220, 212);
+        border-radius: 5px;
         position: absolute;
         top: 15%;
         left: 0;
