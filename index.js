@@ -42,7 +42,7 @@ $(function () {
 
     function moveToNext() {
         switchImage();
-        startTimer(); // 在每次触发定时器时重新设置
+        startTimer(); // 在每次觸發定時器時重新設置
     }
     
     function switchImage() {
