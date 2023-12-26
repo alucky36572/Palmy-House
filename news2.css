@@ -41,7 +41,7 @@
     line-height: 2em;
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    /* width: 1200px; */
     height: 800px;
     justify-content: space-evenly;
 

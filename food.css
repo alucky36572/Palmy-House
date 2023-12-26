@@ -50,21 +50,21 @@
 
 .card h3 {
     font-size: 24px;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
     line-height: 2em;
 
 }
 
 .card p {
     font-size: 18px;
-    letter-spacing: 0.5em;
-    line-height: 1.5em;
-    margin-top: 5%;
+    letter-spacing: 0.3em;
+    line-height: 1.3em;
+    margin-top: 3%;
 }
 
 .card2 h3 {
     font-size: 24px;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
     line-height: 2em;
     margin-top: 1%;
 
@@ -72,9 +72,9 @@
 
 .card2 p {
     font-size: 18px;
-    letter-spacing: 0.5em;
-    line-height: 1.5em;
-    margin-top: 6%;
+    letter-spacing: 0.3em;
+    line-height: 1.3em;
+    margin-top: 3%;
 }
 
 .row {
@@ -192,11 +192,13 @@ hr.style-one {
 
 @media (max-width:768px) {
     .row h3 {
-        text-align: center;
+        margin-left: 10%;
+        margin-top: 5%;
     }
 
     .row p {
-        text-align: center;
+        margin-left: 10%;
+        margin-top: 1%;
     }
 
     .card2 {
@@ -206,4 +208,5 @@ hr.style-one {
     .card {
         margin: 10% 0;
     }
+
 }
